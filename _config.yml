@@ -37,10 +37,9 @@ author:
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0002-3963-1761"
   semantic         : # URL
-  pubmed           : # URL
+  researchmap      : "https://researchmap.jp/sudesnac"
   researchgate     : "https://www.researchgate.net/profile/Sudesna-Chakraborty?ev=hdr_xprf"# URL
   scopus           : # URL
-  researchmap      :"https://researchmap.jp/sudesnac"
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
