@@ -24,8 +24,8 @@ $(document).ready(function () {
       document.getElementById("languageText")
     ) {
       document.getElementById("languageIcon").src =
-        "../assets/images/icons/ir.png";
-      document.getElementById("languageText").innerText = "FA";
+        "../assets/images/icons/jp.png";
+      document.getElementById("languageText").innerText = "日本語";
     }
   }
 
