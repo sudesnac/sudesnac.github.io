@@ -136,32 +136,8 @@ const enResearchPageData = {
 
 // ---------- Jobs page data
 const enJobsPageData = {
-  title_one: "Research Work Experience",
-  items_one: [
-    {
-      title: `Assistant Professor`,
-      company: "Aoyama Gakuin University",
-      startData: "1 April 2023",
-      endDate: "",
-      location: "Tokyo, JAPAN",
-      abstract:
-        "",
-      achievements: [],
-    },
-    {
-      title: ``,
-      company: "",
-      startData: "",
-      endDate: "",
-      location: "",
-      abstract:
-        "",
-      achievements: [],
-    },
-  ],
-  
-  title_two: "Teaching Work Experience",
-  items_two: [
+  type_one_title: "Academic Work Experience",
+  type_one_items: [
     {
       title: `Assistant Professor`,
       company: "Aoyama Gakuin University",
@@ -184,8 +160,8 @@ const enJobsPageData = {
     },
   ],
 
-  title_three: "Non-Academic Work Experience",
-  items_three: [
+  type_two_title: "Non-Academic Work Experience",
+  type_two_items: [
     {
       title: `Assistant Professor`,
       company: "Aoyama Gakuin University",
