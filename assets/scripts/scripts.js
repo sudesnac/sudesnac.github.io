@@ -325,18 +325,26 @@ $(document).ready(function () {
     const jobsData = lang === "en" ? enJobsPageData : faJobsPageData;
 
     document.getElementById("jobs_data").innerHTML = `
-      <h2>Education</h2>
+    <section class="cv_section">
+      <h2 class="cv_heading">🎓 Education</h2>
       ${renderEducation(jobsData.education)}
+    </section>
 
-      <h2>Recognitions</h2>
+    <section class="cv_section">
+      <h2 class="cv_heading">🏅 Recognitions</h2>
       ${renderRecognitions(jobsData.recognitions)}
+    </section>
 
-      <h2>Grants</h2>
+    <section class="cv_section">
+      <h2 class="cv_heading">💰 Grants</h2>
       ${renderGrants(jobsData.grants)}
+    </section>
 
-      <h2>Work Experience</h2>
+    <section class="cv_section">
+      <h2 class="cv_heading">💼 Work Experience</h2>
       ${renderWorkExperience(jobsData.items)}
-    `;
+    </section>
+  `;
   }
 
   if (pathname === "/jobs") {
