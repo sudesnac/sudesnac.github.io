@@ -136,8 +136,8 @@ const enResearchPageData = {
 
 // ---------- Jobs page data
 const enJobsPageData = {
-  title: "Research Work Experience",
-  items: [
+  title_one: "Research Work Experience",
+  items_one: [
     {
       title: `Assistant Professor`,
       company: "Aoyama Gakuin University",
@@ -159,8 +159,9 @@ const enJobsPageData = {
       achievements: [],
     },
   ],
-  title: "Teaching Work Experience",
-  items: [
+  
+  title_two: "Teaching Work Experience",
+  items_two: [
     {
       title: `Assistant Professor`,
       company: "Aoyama Gakuin University",
@@ -182,8 +183,9 @@ const enJobsPageData = {
       achievements: [],
     },
   ],
-  title: "Non-Academic Work Experience",
-  items: [
+
+  title_three: "Non-Academic Work Experience",
+  items_three: [
     {
       title: `Assistant Professor`,
       company: "Aoyama Gakuin University",
