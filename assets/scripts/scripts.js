@@ -18,7 +18,7 @@ $(document).ready(function () {
       document.getElementById("languageText").innerText = "EN";
     }
   } else {
-    document.getElementById("content_wrapper").classList.add("ltr_wrapper");
+    document.getElementById("content_wrapper").classList.add("rtr_wrapper");
     if (
       document.getElementById("languageIcon") &&
       document.getElementById("languageText")
