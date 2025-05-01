@@ -67,7 +67,7 @@ $(document).ready(function () {
       {
         name: globalData.rm,
         active: globalData.rm ? true : false,
-        img: "../assets/images/icons/rm.png",
+        img: "../assets/images/icons/rm.jpg",
       },
     ],
   };
@@ -322,7 +322,7 @@ $(document).ready(function () {
         active: globalData.linkedin ? true : false,
       },
       {
-        img: "../assets/images/icons/rm.png",
+        img: "../assets/images/icons/rm.jpg",
         url: globalData.rm,
         name: globalData.rmTitle,
         active: globalData.rm ? true : false,
