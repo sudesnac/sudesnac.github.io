@@ -24,4 +24,6 @@ const globalData = {
   github: "https://github.com/sudesnac",
   orcidTitle: "Orcid",
   orcid: "https://orcid.org/0000-0002-3963-1761",
+  rmTitle: "Researchmap"
+  rm: "https://researchmap.jp/sudesnac"
 };

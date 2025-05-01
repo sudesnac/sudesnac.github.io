@@ -65,10 +65,10 @@ $(document).ready(function () {
         img: "../assets/images/icons/github.png",
       },
       {
-        name: globalData.resume,
-        active: globalData.resume ? true : false,
+        name: globalData.rm,
+        active: globalData.rm ? true : false,
         url: "/",
-        img: "../assets/images/icons/cv.png",
+        img: "../assets/images/icons/rm.png",
       },
     ],
   };
@@ -321,6 +321,12 @@ $(document).ready(function () {
         url: globalData.linkedin,
         name: globalData.linkedinTitle,
         active: globalData.linkedin ? true : false,
+      },
+      {
+        img: "../assets/images/icons/rm.png",
+        url: globalData.rm,
+        name: globalData.rmTitle,
+        active: globalData.rm ? true : false,
       },
     ],
   };
