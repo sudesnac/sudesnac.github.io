@@ -67,7 +67,6 @@ $(document).ready(function () {
       {
         name: globalData.rm,
         active: globalData.rm ? true : false,
-        url: "/",
         img: "../assets/images/icons/rm.png",
       },
     ],
