@@ -8,7 +8,6 @@ const navbarLinks = {
 
 const globalData = {
   image: "../files/sc.jpg",
-  resume: "../files/resume.pdf",
   enAddress: "Aoyama Gakuin University, Tokyo JAPAN",
   faAddress: "青山学院大学理工学部情報テクノロジー学科",
   email: "sudesna@it.aoyama.ac.jp",
