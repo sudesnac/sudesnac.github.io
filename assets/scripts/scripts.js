@@ -51,7 +51,7 @@ $(document).ready(function () {
       {
         name: globalData.twitter,
         active: globalData.twitter ? true : false,
-        img: "../assets/images/icons/twitter.png",
+        img: "../assets/images/icons/bluesky.png",
       },
       {
         name: globalData.linkedin,
@@ -68,7 +68,7 @@ $(document).ready(function () {
         name: globalData.resume,
         active: globalData.resume ? true : false,
         url: "/",
-        img: "../assets/images/icons/rm.png",
+        img: "../assets/images/icons/cv.png",
       },
     ],
   };
@@ -236,12 +236,12 @@ $(document).ready(function () {
           `<div class='job_item'>
             <div class='job_header'>
               <div>
-                <h1>${job.title}${lang === "en" ? "," : "،"}</h1>
+                <h1>${job.title}${lang === "en" ? "," : ","}</h1>
                 <h2> ${job.company}</h2>
               </div>
               <div>
                 <span>${job.startData} - ${
-            job.endDate ? job.endDate : lang === "en" ? "Now" : " تاکنون "
+            job.endDate ? job.endDate : lang === "en" ? "Now" : "現在"
           }</span>
                 <span class='job_location'>${job.location}</span>
               </div>
@@ -287,13 +287,13 @@ $(document).ready(function () {
         active: globalData.email ? true : false,
       },
       {
-        img: "../assets/images/icons/twitter.png",
+        img: "../assets/images/icons/bluesky.png",
         url: globalData.twitter,
         name: globalData.twitterTitle,
         active: globalData.twitter ? true : false,
       },
       {
-        img: "../assets/images/icons/whatsapp.png",
+        img: "../assets/images/icons/rg.png",
         url: globalData.whatsapp,
         name: globalData.whatsappTitle,
         active: globalData.whatsapp ? true : false,
