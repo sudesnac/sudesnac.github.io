@@ -275,93 +275,53 @@
 }
 
 /* Jobs page styles */
-#jobs_data {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: 3rem;
+.cv_section {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
 }
 
-#jobs_data .job_item {
-  margin: 0;
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 2rem;
-}
-
-#jobs_data .job_item::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: 10px;
-  width: 8px;
-  height: 8px;
-  background-color: #000;
-  border-radius: 50%;
-}
-
-#jobs_data .job_item::before {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 15px;
-  width: 2px;
-  height: calc(100% + 2rem);
-  background-color: #e6e6e6;
-}
-
-#jobs_data .job_item:last-of-type:before {
-  display: none;
-}
-
-#jobs_data .job_header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#jobs_data .job_header div {
-  display: flex;
-  align-items: flex-end;
-}
-
-#jobs_data .job_header h1 {
-  font-size: 1.2rem;
+.cv_heading {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
   font-weight: bold;
-  margin: 0;
+  color: #2a2a2a;
+  border-left: 6px solid #4078c0;
+  padding-left: 12px;
 }
 
-#jobs_data .job_header h2 {
+.job_item {
+  margin-bottom: 20px;
+}
+
+.job_item h1 {
   font-size: 1.2rem;
-  font-style: italic;
+  font-weight: 600;
   margin: 0;
-  margin-left: 0.4rem;
 }
 
-#jobs_data .job_header .job_location {
-  margin-left: 1rem;
-  position: relative;
+.job_item h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+  margin: 2px 0 10px 0;
 }
 
-#jobs_data .job_header .job_location::before {
-  content: "";
-  position: absolute;
-  left: -0.5rem;
-  top: 15%;
-  height: 70%;
-  width: 1px;
-  background-color: #e6e6e6;
+.job_item p {
+  margin: 5px 0;
 }
 
-#jobs_data p {
-  margin-top: 0.5rem;
-  text-align: justify;
+.job_achievements {
+  margin-top: 10px;
 }
 
-#jobs_data ul {
-  padding: 0;
-  padding-left: 1rem;
+.job_achievements ul {
+  padding-left: 20px;
+}
+
+.job_achievements li {
+  list-style: disc;
+  margin-bottom: 5px;
 }
 
 /* Contact page styles */
