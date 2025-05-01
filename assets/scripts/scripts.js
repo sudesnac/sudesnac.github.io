@@ -8,7 +8,7 @@ $(document).ready(function () {
   }
 
   if (lang === "fa") {
-    document.getElementById("content_wrapper").classList.add("rtl_wrapper");
+    document.getElementById("content_wrapper").classList.add("ltl_wrapper");
     if (
       document.getElementById("languageIcon") &&
       document.getElementById("languageText")
@@ -39,9 +39,14 @@ $(document).ready(function () {
         img: "../assets/images/icons/mail.png",
       },
       {
+        name: globalData.googleScholar,
+        active: globalData.googleScholar ? true : false,
+        img: "../assets/images/icons/google-scholar.png",
+      },
+      {
         name: globalData.whatsapp,
         active: globalData.whatsapp ? true : false,
-        img: "../assets/images/icons/whatsapp.png",
+        img: "../assets/images/icons/rg.png",
       },
       {
         name: globalData.twitter,
@@ -63,7 +68,7 @@ $(document).ready(function () {
         name: globalData.resume,
         active: globalData.resume ? true : false,
         url: "/",
-        img: "../assets/images/icons/resume.png",
+        img: "../assets/images/icons/rm.png",
       },
     ],
   };
@@ -123,7 +128,7 @@ $(document).ready(function () {
             publication.link &&
             `<li>
                 <a href=${publication.link} target="_blank"> ${
-              lang === "en" ? "View" : " مشاهده"
+              lang === "en" ? "View" : "閲覧"
             } </a>
               </li>`
           }
@@ -131,7 +136,7 @@ $(document).ready(function () {
               publication.github &&
               `<li>
                   <a href=${publication.github} target="_blank">  ${
-                lang === "en" ? "Github" : "گیت‌هاب"
+                lang === "en" ? "Github" : ""
               }</a>
                 </li>`
             }
@@ -145,7 +150,7 @@ $(document).ready(function () {
 
   function publicationsData() {
     document.getElementById("page_title").innerText =
-      lang === "en" ? "Publications" : "مقالات";
+      lang === "en" ? "Publications" : "業績";
 
     document.getElementById("publications_type_one_title").innerHTML =
       lang === "en"
@@ -203,7 +208,7 @@ $(document).ready(function () {
   // Research page data
   function researchData() {
     document.getElementById("page_title").innerText =
-      lang === "en" ? "Research" : "تحقیقات";
+      lang === "en" ? "Research" : "研究";
 
     document.getElementById("research_title").innerHTML =
       lang === "en" ? enResearchPageData.title : faResearchPageData.title;
@@ -218,7 +223,7 @@ $(document).ready(function () {
   // Jobs page data
   function jobsData() {
     document.getElementById("page_title").innerText =
-      lang === "en" ? "Jobs" : " سوابق شغلی ";
+      lang === "en" ? "Jobs" : "経歴";
 
     document.getElementById("jobs_title").innerHTML =
       lang === "en" ? enJobsPageData.title : faJobsPageData.title;
@@ -264,7 +269,7 @@ $(document).ready(function () {
 
   // Contact page data
   const contact_data = {
-    contact_title: lang === "en" ? "Contact" : "ارتباط با من",
+    contact_title: lang === "en" ? "Contact" : "問合せ",
     contact_items: [
       {
         img: "../assets/images/icons/location.png",
