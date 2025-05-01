@@ -227,46 +227,123 @@ $(document).ready(function () {
     document.getElementById("jobs_title").innerHTML =
       lang === "en" ? enJobsPageData.title : faJobsPageData.title;
 
-    document.getElementById("jobs_data").innerHTML = (
-      lang === "en" ? enJobsPageData.items : faJobsPageData.items
-    )
-      .map(
-        (job) =>
-          `<div class='job_item'>
-            <div class='job_header'>
-              <div>
-                <h1>${job.title}${lang === "en" ? "," : ","}</h1>
-                <h2> ${job.company}</h2>
-              </div>
-              <div>
-                <span>${job.startData} - ${
+    function renderEducation(education) {
+      return education
+        .map(
+          (edu) => `
+        <div class='job_item'>
+          <div class='job_header'>
+            <div>
+              <h1>${edu.degree}</h1>
+              <h2>${edu.institution}</h2>
+            </div>
+            <div><span>${edu.duration}</span></div>
+          </div>
+          ${
+            edu.thesisTitle
+              ? `<p><strong>Thesis:</strong> ${edu.thesisTitle}</p>`
+              : ""
+          }
+          ${
+            edu.supervisors
+              ? `<p><strong>Supervisors:</strong> ${edu.supervisors.join(", ")}</p>`
+              : ""
+          }
+          ${
+            edu.link
+              ? `<p><a href="${edu.link}" target="_blank">View Thesis</a></p>`
+              : ""
+          }
+        </div>
+      `
+        )
+        .join("");
+    }
+
+    function renderRecognitions(recognitions) {
+      return recognitions
+        .map(
+          (rec) => `
+        <div class='job_item'>
+          <h1>${rec.title}</h1>
+          <p>${rec.description}</p>
+        </div>
+      `
+        )
+        .join("");
+    }
+
+    function renderGrants(grants) {
+      return grants
+        .map(
+          (grant) => `
+        <div class='job_item'>
+          <h1>${grant.title}</h1>
+          <p>${grant.description}</p>
+          <p><strong>${grant.duration}</strong></p>
+        </div>
+      `
+        )
+        .join("");
+    }
+
+    function renderWorkExperience(items) {
+      return items
+        .map(
+          (job) => `
+        <div class='job_item'>
+          <div class='job_header'>
+            <div>
+              <h1>${job.title}</h1>
+              <h2>${job.company}</h2>
+            </div>
+            <div>
+              <span>${job.startData} - ${
             job.endDate ? job.endDate : lang === "en" ? "Now" : "現在"
           }</span>
-                <span class='job_location'>${job.location}</span>
-              </div>
+              <span class='job_location'>${job.location}</span>
             </div>
-            <p>${job.abstract}</p>
-            ${
-              job.achievements.length > 0
-                ? `<div class="job_achievements">
+          </div>
+          <p>${job.abstract}</p>
+          ${
+            job.achievements && job.achievements.length > 0
+              ? `<div class="job_achievements">
                   <ul>
                     ${job.achievements
                       .map((achievement) => `<li>${achievement}</li>`)
                       .join("")}
                   </ul>
                 </div>`
-                : ""
-            }
-        </div>`
-      )
-      .join("");
+              : ""
+          }
+        </div>
+      `
+        )
+        .join("");
+    }
+
+    const jobsData = lang === "en" ? enJobsPageData : faJobsPageData;
+
+    document.getElementById("jobs_data").innerHTML = `
+      <h2>Education</h2>
+      ${renderEducation(jobsData.education)}
+
+      <h2>Recognitions</h2>
+      ${renderRecognitions(jobsData.recognitions)}
+
+      <h2>Grants</h2>
+      ${renderGrants(jobsData.grants)}
+
+      <h2>Work Experience</h2>
+      ${renderWorkExperience(jobsData.items)}
+    `;
   }
 
   if (pathname === "/jobs") {
     jobsData();
   }
 
-  // Contact page data
+// Contact page data
   const contact_data = {
     contact_title: lang === "en" ? "Contact" : "問合せ",
     contact_items: [
