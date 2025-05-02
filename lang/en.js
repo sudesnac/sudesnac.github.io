@@ -46,13 +46,13 @@ const enPublicationsPageData = {
   type_two_title: "Conference Papers",
   type_two_items: [
     {
-      citation: `Aoyama, J., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K. (2025). Household task planning with multi-objects state and relationship using LLMs. <em>Proceedings of the 17th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART</em>. <a href="https://10.5220/0013188400003890" target="_blank">https://10.5220/0013188400003890</a>`
+      citation: `Aoyama, J., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K. (2025). Household task planning with multi-objects state and relationship using LLMs. <em>Proceedings of the 17th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART</em>. <a href="http://dx.doi.org/10.5220/0013188400003890" target="_blank">http://dx.doi.org/10.5220/0013188400003890</a>`
     },
     {
-      citation: `Anaguchi, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., Reasoning and Justification System for Domestic Hazardous Behaviors Based on Knowledge Graph of Daily Activities and Retrieval-Augmented Generation. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="https://doi: 10.1109/CANDAR64496.2024.00010" target="_blank">https://10.1109/CANDAR64496.2024.00010"</a>`
+      citation: `Anaguchi, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., Reasoning and Justification System for Domestic Hazardous Behaviors Based on Knowledge Graph of Daily Activities and Retrieval-Augmented Generation. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="http://dx.doi.org/10.1109/CANDAR64496.2024.00010" target="_blank">http://dx.doi.org/10.1109/CANDAR64496.2024.00010"</a>`
     },
     {
-      citation: `Mitsuji, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., (2024). Entity linking for Wikidata using LLMs and Wikipedia links. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="https://10.1109/CANDARW64572.2024.00030" target="_blank">https://10.1109/CANDARW64572.2024.00030"</a>`
+      citation: `Mitsuji, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., (2024). Entity linking for Wikidata using LLMs and Wikipedia links. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="http://dx.doi.org/10.1109/CANDARW64572.2024.00030" target="_blank">http://dx.doi.org/10.1109/CANDARW64572.2024.00030"</a>`
     }
   ],
 
