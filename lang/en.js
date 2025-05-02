@@ -120,7 +120,6 @@ const enResearchPageData = {
   content: `
     <div class='research_content'>
         <p> My research .
-        <img src='../files/images/research.png' />
         </p>
         <br />
         <h4 style="font-size: 1.1rem "> Awards and Funding </h4>

@@ -9,76 +9,99 @@ const faNavbarData = {
 
 const faHomePageData = {
   name: "チャクラボルティ　シュデシナ",
-  jobTitle: "助教",
+  jobTitle: "青山学院大学理工学部情報テクノロジー学科",
   home_title: "",
   home_content: ` <p> </p>
   `,
 };
 
 const faPublicationsPageData = {
-  type_one_title: "学術論文",
-
+  type_one_title: "Journal Papers",
   type_one_items: [
     {
-      title: `رقصیدن با ضربان تغییرات اقلیمی: مطالعه فریم‌های بصری در TikTok از طریق شکاف چپ و راست میان سیاستمداران ایالات متحده (با ). `,
-      abstract: `سیاستمداران در سراسر طیف سیاسی در تلاش برای دسترسی به رای دهندگان جوان با تولید ویدیوهای اصلی به TikTok رفته اند. این روند جدید، TikTok را به حلقه قطبی جدید در نبرد ارتباطات سیاسی تبدیل کرده است و نفوذ حزبی در مورد موضوعاتی مانند تغییرات آب و هوا را عمیق تر می کند. با این حال `,
-      date: "",
-      link: "http://link.com",
-      github: "",
-      writers: ["علی احمدی", " سارا امینی "],
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Onuska, K.M., et al. (2024). Multimodal gradients of basal forebrain connectivity across the neocortex. <em>Nature Communications, 15</em>. <a href="https://doi.org/10.1038/s41467-024-53148-x" target="_blank">https://doi.org/10.1038/s41467-024-53148-x</a>`
     },
     {
-      title: ` "اکنون شما به زبان من صحبت می کنید" شفافیت ویژه زبان و مذاکرات قانونی در شورای وزیران اتحادیه اروپا. (با ).`,
-      abstract: `سیاستمداران در سراسر طیف سیاسی در تلاش برای دسترسی به رای دهندگان جوان با تولید ویدیوهای اصلی به TikTok رفته اند. این روند جدید، TikTok را به حلقه قطبی جدید در نبرد ارتباطات سیاسی تبدیل کرده است و نفوذ حزبی در مورد موضوعاتی مانند تغییرات آب و هوا را عمیق تر می کند. با این حال `,
-      date: "1996",
-      link: "",
-      github: "http://github.com",
-      writers: ["علی احمدی"],
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Lee, S.K., Arnold, S.M., Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention. <em>Journal of Neurochemistry</em>. <a href="https://doi.org/10.1111/jnc.15990" target="_blank">https://doi.org/10.1111/jnc.15990</a>`
     },
+    {
+      citation: `Hamada, H., Matsuzawa, D., Sutoh, C., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, Ito, H., Tsuji, H., Obata, T., & Shimizu, E. (2018). Comparison of brain activity between motor imagery and mental rotation of the hand tasks. <em>Brain Imaging and Behavior</em>. <a href="https://doi.org/10.1007/s11682-017-9821-9" target="_blank">https://doi.org/10.1007/s11682-017-9821-9</a>`
+    },
+    {
+      citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., Yamada, M., Nagaoka, S., <span class='highlight-author'>Chakraborty, S.</span>, Ishii, D., Matsuda, S., Tomizawa, H., Ito, H., Tsuji, H., Obata, T., & Shimizu, E. (2015). Transient contribution of left posterior parietal cortex to cognitive restructuring. <em>Scientific Reports, 5</em>. <a href="https://doi.org/10.1038/srep09199" target="_blank">https://doi.org/10.1038/srep09199</a>`
+    },
+    {
+      citation: `Kurayama, T., Tadokoro, Y., Fujimoto, S., Komiya, Z., Yoshida, S., <span class='highlight-author'>Chakraborty, S.</span>, Matsuzawa, D., Shimizu, E., Kondo, K., & Otaka, Y. (2013). A comparison of the movement characteristics between the kneeling gait and the normal gait. <em>Gait & Posture, 37</em>(3). <a href="https://doi.org/10.1016/j.gaitpost.2012.08.009" target="_blank">https://doi.org/10.1016/j.gaitpost.2012.08.009</a>`
+    }
   ],
 
-  type_two_title: "مقالات تحت بررسی ",
+  type_two_title: "Conference Papers",
   type_two_items: [
     {
-      title: `رقصیدن با ضربان تغییرات اقلیمی: مطالعه فریم‌های بصری در TikTok از طریق شکاف چپ و راست میان سیاستمداران ایالات متحده (با ). `,
-      abstract: `سیاستمداران در سراسر طیف سیاسی در تلاش برای دسترسی به رای دهندگان جوان با تولید ویدیوهای اصلی به TikTok رفته اند. این روند جدید، TikTok را به حلقه قطبی جدید در نبرد ارتباطات سیاسی تبدیل کرده است و نفوذ حزبی در مورد موضوعاتی مانند تغییرات آب و هوا را عمیق تر می کند. با این حال `,
-      date: "",
-      link: "http://link.com",
-      github: "",
-      writers: [],
+      citation: `Aoyama, J., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K. (2025). Household task planning with multi-objects state and relationship using LLMs. <em>Proceedings of the 17th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART</em>. <a href="http://dx.doi.org/10.5220/0013188400003890" target="_blank">http://dx.doi.org/10.5220/0013188400003890</a>`
     },
     {
-      title: ` "اکنون شما به زبان من صحبت می کنید" شفافیت ویژه زبان و مذاکرات قانونی در شورای وزیران اتحادیه اروپا. (با ).`,
-      abstract: `سیاستمداران در سراسر طیف سیاسی در تلاش برای دسترسی به رای دهندگان جوان با تولید ویدیوهای اصلی به TikTok رفته اند. این روند جدید، TikTok را به حلقه قطبی جدید در نبرد ارتباطات سیاسی تبدیل کرده است و نفوذ حزبی در مورد موضوعاتی مانند تغییرات آب و هوا را عمیق تر می کند. با این حال `,
-      date: "1996",
-      link: "http://link.com",
-      github: "http://github.com",
-      writers: ["علی احمدی", " سارا امینی "],
+      citation: `Anaguchi, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., Reasoning and Justification System for Domestic Hazardous Behaviors Based on Knowledge Graph of Daily Activities and Retrieval-Augmented Generation. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="http://dx.doi.org/10.1109/CANDAR64496.2024.00010" target="_blank">http://dx.doi.org/10.1109/CANDAR64496.2024.00010"</a>`
     },
+    {
+      citation: `Mitsuji, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., (2024). Entity linking for Wikidata using LLMs and Wikipedia links. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="http://dx.doi.org/10.1109/CANDARW64572.2024.00030" target="_blank">http://dx.doi.org/10.1109/CANDARW64572.2024.00030"</a>`
+    }
   ],
 
-  type_three_title: "فصل های کتاب ",
+  type_three_title: "Conference Presentations",
   type_three_items: [
+    {citation:`<span class='highlight-author'>Chakraborty, S.</span> (2024). Development of early biomarkers for abnormal aging to extend healthspan. <em>Proceedings of IEEE Humanitarian Activities Workshop with AI Technologies. IEEE WCCI.</em> Yokohama, Japan`},
     {
-      title: `رقصیدن با ضربان تغییرات اقلیمی: مطالعه فریم‌های بصری در TikTok از طریق شکاف چپ و راست میان سیاستمداران ایالات متحده (با ). `,
-      abstract: `سیاستمداران در سراسر طیف سیاسی در تلاش برای دسترسی به رای دهندگان جوان با تولید ویدیوهای اصلی به TikTok رفته اند. این روند جدید، TikTok را به حلقه قطبی جدید در نبرد ارتباطات سیاسی تبدیل کرده است و نفوذ حزبی در مورد موضوعاتی مانند تغییرات آب و هوا را عمیق تر می کند. با این حال `,
-      date: "",
-      link: "http://link.com",
-      github: "",
-      writers: [],
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Lee, S.K., Arnold, S.M., Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2024, June). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention. <em>OHBM Annual Meeting</em>, Seoul, Korea.`
     },
     {
-      title: ` "اکنون شما به زبان من صحبت می کنید" شفافیت ویژه زبان و مذاکرات قانونی در شورای وزیران اتحادیه اروپا. (با ).`,
-      abstract: `سیاستمداران در سراسر طیف سیاسی در تلاش برای دسترسی به رای دهندگان جوان با تولید ویدیوهای اصلی به TikTok رفته اند. این روند جدید، TikTok را به حلقه قطبی جدید در نبرد ارتباطات سیاسی تبدیل کرده است و نفوذ حزبی در مورد موضوعاتی مانند تغییرات آب و هوا را عمیق تر می کند. با این حال `,
-      date: "1996",
-      link: "http://link.com",
-      github: "http://github.com",
-      writers: ["علی احمدی"],
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023, July). Multimodal gradients of the human basal forebrain. <em>OHBM Annual Meeting</em>, Montreal, Canada.`
     },
+    {
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023, March). Multimodal connectivity gradients. <em>22nd Annual Imaging Network Ontario Symposium</em>, London.`
+    },
+    {
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2022, June). Functional connectivity gradients of the human basal forebrain. <em>OHBM Annual Meeting</em>, Hybrid Conference.`
+    },
+    {
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2022, June). Functional gradients of basal forebrain. <em>Robarts Research Retreat</em>, London.`
+    },
+    {
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Schmitz, T.W., & Khan, A.R. (2020, June). Parcellation of the human basal forebrain using diffusion data. <em>OHBM Annual Meeting</em>, Virtual Conference.`
+    },
+    {
+      citation: `Saxon, M., Barkema, D., McKenna, H., Loyer, E., Rader, B., Sridhar, J., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2015). PPA: Research and Clinical Programs. <em>Alzheimer Day</em>, Chicago.`
+    },
+    {
+      citation: `Donley, B.E., <span class='highlight-author'>Chakraborty, S.</span>, de Chastelaine, M., Kennedy, K.M., & Rugg, M.D. (2015). Cortical thickness and cognitive performance. <em>Dallas Aging & Cognition Conference</em>.`
+    },
+    {
+      citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., Yamada, M., Nagaoka, S., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2013, Feb). Brain activity in Socratic method. <em>Japanese Society of Anxiety Disorder Conference</em>, Sapporo.`
+    },
+    {
+      citation: `Hirano, Y., Obata, T., Matsuzawa, D., Sutoh, C., <span class='highlight-author'>Chakraborty, S.</span>, & Shimizu, E. (2012, June). Amygdala activity in anxiety tasks. <em>OHBM</em>, Beijing, China.`
+    },
+    {
+      citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2012). Restructuring cognitive schema. <em>SfN Annual Meeting</em>, New Orleans.`
+    },
+    {
+      citation: `Hamada, H., Sutoh, C., Matsuzawa, D., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, Obata, T., & Shimizu, E. (2012, Sept). Mental rotation vs. imagery. <em>Japan Neuroscience Society</em>, Nagoya.`
+    },
+    {
+      citation: `Stutzman, A.M., <span class='highlight-author'>Chakraborty, S.</span>, Durisko, C., & Fiez, J.A. (2009). Working memory interference. <em>PSLC Colloquium</em>, Pittsburgh.`
+    }
   ],
 
-  type_four_title: "",
-  type_four_items: [],
+  type_four_title: "PhD Thesis",
+  type_four_items: [
+    {
+      citation: `<span class='highlight-author'>Chakraborty, S.</span> (2023). <em>Multimodal connectivity of the human basal forebrain</em> (Doctoral dissertation). Western University. <a href="https://ir.lib.uwo.ca/etd/9476/" target="_blank">https://ir.lib.uwo.ca/etd/9476/</a>`
+    }
+  ],
+
+  type_five_title: "Other",
+  type_five_items: [
+  ]
 };
 
 const faResearchPageData = {
