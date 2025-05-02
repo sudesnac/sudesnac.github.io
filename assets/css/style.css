@@ -175,6 +175,25 @@
   font-style: italic;
 }
 
+.apa-ref {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-left: 2em;
+  text-indent: -2em;
+  margin-bottom: 1.5em;
+}
+
+.apa-ref a {
+  color: #1a0dab;
+  text-decoration: underline;
+}
+
+.highlight-author {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 
 /* Research page styles */
 #research_data p {
