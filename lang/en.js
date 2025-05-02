@@ -58,7 +58,7 @@ const enPublicationsPageData = {
 
   type_three_title: "Conference Presentations",
   type_three_items: [
-    {citation:`span class='highlight-author'>Chakraborty, S.</span> (2024). Development of early biomarkers for abnormal aging to extend healthspan. <em>Proceedings of IEEE Humanitarian Activities Workshop with AI Technologies. IEEE WCCI.</em> Yokohama, Japan`},
+    {citation:`<span class='highlight-author'>Chakraborty, S.</span> (2024). Development of early biomarkers for abnormal aging to extend healthspan. <em>Proceedings of IEEE Humanitarian Activities Workshop with AI Technologies. IEEE WCCI.</em> Yokohama, Japan`},
     {
       citation: `<span class='highlight-author'>Chakraborty, S.</span>, Lee, S.K., Arnold, S.M., Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2024, June). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention. <em>OHBM Annual Meeting</em>, Seoul, Korea.`
     },
