@@ -118,7 +118,7 @@ const faResearchPageData = {
 };
 
 const faJobsPageData = {
-  title: "Curriculum Vitae",
+  title: "",
 
   education: [
     {

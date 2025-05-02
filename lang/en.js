@@ -14,10 +14,14 @@ const enHomePageData = {
   jobTitle: "Aoyama Gakuin University",
   home_title: "About me",
   home_content: `
-  <div>
-    <p> 
-    </p>
-  </div>
+  <div class="about_content">
+  <p>
+    I am a neuroscientist and assistant professor at Aoyama Gakuin University (Department of Integrated Information Technology), with a strong interest in understanding the human brain’s structural and functional networks across aging and cognitive states. My interdisciplinary research draws on multimodal neuroimaging, natural language processing, and data science to explore how attention, memory, and self-related processes are shaped by subcortical structures.
+  </p>
+  <p>
+    I completed my PhD at Western University (Canada), where I studied the connectivity of the human basal forebrain using structural, functional, and microstructural imaging data. I’ve also worked in clinical and AI industry settings in Japan and the US, and I’m currently involved in both neuroscience and language-based cognitive research.
+  </p>
+</div>
   `,
 };
 
@@ -118,12 +122,28 @@ const enPublicationsPageData = {
 const enResearchPageData = {
   title: "Research",
   content: `
-    <div class='research_content'>
-        <p> My research .
-        </p>
-        <br />
-        <h4 style="font-size: 1.1rem "> Awards and Funding </h4>
-    </div>
+    <div class="research_content">
+  <h3>Current Focus</h3>
+  <p>
+    My research centers on the human basal forebrain, exploring its cholinergic role in cognition using fMRI, diffusion MRI, and advanced computational tools. I also investigate age-related neural changes and develop multimodal biomarkers using neuroimaging and language data.
+  </p>
+
+  <h3>Techniques</h3>
+  <ul>
+    <li>Resting-state & task-based fMRI</li>
+    <li>Diffusion MRI & tractography</li>
+    <li>Neuroanatomical parcellation & gradient analysis</li>
+    <li>Natural language processing (LLMs, narrative fMRI)</li>
+    <li>Multivariate & machine learning methods</li>
+  </ul>
+
+  <h3>Ongoing Projects</h3>
+  <ul>
+    <li>Basal forebrain connectivity and attentional modulation</li>
+    <li>Neural correlates of narrative comprehension and memory</li>
+    <li>Age-related shifts in memory systems and cortical morphology</li>
+  </ul>
+</div>
   `,
 };
 
