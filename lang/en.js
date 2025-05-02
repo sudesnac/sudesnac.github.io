@@ -27,10 +27,10 @@ const enPublicationsPageData = {
   type_one_title: "Journal Papers",
   type_one_items: [
     {
-      citation: `Chakraborty, <span class='highlight-author'>S.</span>, Haast, R.A.M., Onuska, K.M., et al. (2024). Multimodal gradients of basal forebrain connectivity across the neocortex. <em>Nature Communications, 15</em>. <a href="https://doi.org/10.1038/s41467-024-53148-x" target="_blank">https://doi.org/10.1038/s41467-024-53148-x</a>`
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Onuska, K.M., et al. (2024). Multimodal gradients of basal forebrain connectivity across the neocortex. <em>Nature Communications, 15</em>. <a href="https://doi.org/10.1038/s41467-024-53148-x" target="_blank">https://doi.org/10.1038/s41467-024-53148-x</a>`
     },
     {
-      citation: `Chakraborty, <span class='highlight-author'>S.</span>, Lee, S.K., Arnold, S.M., Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention. <em>Journal of Neurochemistry</em>. <a href="https://doi.org/10.1111/jnc.15990" target="_blank">https://doi.org/10.1111/jnc.15990</a>`
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Lee, S.K., Arnold, S.M., Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention. <em>Journal of Neurochemistry</em>. <a href="https://doi.org/10.1111/jnc.15990" target="_blank">https://doi.org/10.1111/jnc.15990</a>`
     },
     {
       citation: `Hamada, H., Matsuzawa, D., Sutoh, C., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, Ito, H., Tsuji, H., Obata, T., & Shimizu, E. (2018). Comparison of brain activity between motor imagery and mental rotation of the hand tasks. <em>Brain Imaging and Behavior</em>. <a href="https://doi.org/10.1007/s11682-017-9821-9" target="_blank">https://doi.org/10.1007/s11682-017-9821-9</a>`
@@ -46,10 +46,13 @@ const enPublicationsPageData = {
   type_two_title: "Conference Papers",
   type_two_items: [
     {
-      citation: `Aoyama, J., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., & Fukuda, K. (2025). Household task planning with multi-objects state and relationship using LLMs. <em>Proc. of the 2025 International Conference on Artificial Intelligence</em>.`
+      citation: `Aoyama, J., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K.  (2025). Household task planning with multi-objects state and relationship using LLMs. <em>Proceedings of the 17th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART</em>. <a href="https://10.5220/0013188400003890" target="_blank">https://10.5220/0013188400003890</a>`
     },
     {
-      citation: `Mitsuji, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., & Fukuda, K. (2024). Entity linking for Wikidata using LLMs and Wikipedia links. <em>Proc. of the 2024 Conference on Computational Linguistics</em>.`
+      citation: `Anaguchi, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., Reasoning and Justification System for Domestic Hazardous Behaviors Based on Knowledge Graph of Daily Activities and Retrieval-Augmented Generation. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan, 2024. <a href="https://doi: 10.1109/CANDAR64496.2024.00010" target="_blank">https://10.1109/CANDAR64496.2024.00010"</a>`
+    }
+    {
+      citation: `Mitsuji, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., (2024). Entity linking for Wikidata using LLMs and Wikipedia links. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan, 2024. <a href="https://10.1109/CANDARW64572.2024.00030" target="_blank">https://10.1109/CANDARW64572.2024.00030"</a>`
     }
   ],
 
