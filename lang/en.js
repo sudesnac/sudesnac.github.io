@@ -241,20 +241,29 @@ const enJobsPageData = {
       description: "$15,000 annually for 4 years, University of Western Ontario",
     },
     {
-      title: "CAIR若手プロジェクトメンバーによる国際会議発表支援",
-      description: "青山学院大学",
+      title: "CAIR Aids for young scientists to present at international conferences",
+      description: "Center for Advanced Information technology Research, Aoyama Gakuin University",
     },
   ],
 
   grants: [
     {
-      title: "KAKEN Grant-in-Aid for Young Scientists",
+      title: "KAKENHI Grant-in-Aid for Young Scientists",
       description: "Japan Society for the Promotion of Science, ¥3,700,000",
       duration: "2025 – 2028",
     },
   ],
 
   items: [
+    {
+      title: "Assistant Professor",
+      company: "Aoyama Gakuin University, College of Science and Engineering",
+      startData: "April 2024",
+      endDate: null,
+      location: "Japan",
+      abstract: "",
+      achievements: [],
+    },
     {
       title: "Associated Research Staff (Honorary Position)",
       company: "Robarts Research Institute, Western University",
@@ -274,6 +283,24 @@ const enJobsPageData = {
       achievements: ["Supervised by Dr. Ali Khan and Dr. Taylor Schmitz"],
     },
     {
+      title: "Teaching Assistant",
+      company: "Western University",
+      startData: "Aug 2018",
+      endDate: "Dec 2018",
+      location: "Canada",
+      abstract: "Applied Psychology (Psych 2035)",
+      achievements: ["Office hours, student support, exam review preparation"],
+    },
+    {
+      title: "Teaching Assistant",
+      company: "Western University",
+      startData: "Aug 2017",
+      endDate: "Apr 2018",
+      location: "Canada",
+      abstract: "Introduction to Psychology (Psych 1000)",
+      achievements: ["Office hours, grading, review sessions"],
+    },
+    {
       title: "PhD Researcher",
       company: "Western University",
       startData: "Aug 2017",
@@ -281,6 +308,15 @@ const enJobsPageData = {
       location: "Canada",
       abstract: "Hippocampus plasticity in treatment of MDD with ECT",
       achievements: ["Supervised by Dr. Stefan Kohler and Dr. Ali Khan"],
+    },
+    {
+      title: "Senior Consultant",
+      company: "NTT DATA Institute of Management Consulting, Inc.",
+      startData: "Apr 2016",
+      endDate: "Jun 2017",
+      location: "Japan",
+      abstract: "Advised on neuroscience-informed product development",
+      achievements: [],
     },
     {
       title: "Researcher",
@@ -343,33 +379,6 @@ const enJobsPageData = {
       endDate: "Aug 2008",
       location: "Japan",
       abstract: "MRI and psychiatric evaluations for Alzheimer’s and Parkinson’s patients",
-      achievements: [],
-    },
-    {
-      title: "Teaching Assistant",
-      company: "Western University",
-      startData: "Aug 2018",
-      endDate: "Dec 2018",
-      location: "Canada",
-      abstract: "Applied Psychology (Psych 2035)",
-      achievements: ["Office hours, student support, exam review preparation"],
-    },
-    {
-      title: "Teaching Assistant",
-      company: "Western University",
-      startData: "Aug 2017",
-      endDate: "Apr 2018",
-      location: "Canada",
-      abstract: "Introduction to Psychology (Psych 1000)",
-      achievements: ["Office hours, grading, review sessions"],
-    },
-    {
-      title: "Senior Consultant",
-      company: "NTT DATA Institute of Management Consulting, Inc.",
-      startData: "Apr 2016",
-      endDate: "Jun 2017",
-      location: "Japan",
-      abstract: "Advised on neuroscience-informed product development",
       achievements: [],
     },
     {
