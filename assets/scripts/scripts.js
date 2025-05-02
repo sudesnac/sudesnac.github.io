@@ -277,15 +277,20 @@ $(document).ready(function () {
       return grants
         .map(
           (grant) => `
-        <div class='job_item'>
-          <h1>${grant.title}</h1>
-          <p>${grant.description}</p>
-          <p><strong>${grant.duration}</strong></p>
-        </div>
-      `
+          <div class='job_item'>
+            <h1>${grant.title}</h1>
+            <p>${grant.description}</p>
+            <p><strong>${grant.duration}</strong></p>
+            ${
+              grant.link
+                ? `<p><a href="${grant.link}" target="_blank" class="cv_link">View</a></p>`
+                : ""
+            }
+          </div>
+        `
         )
         .join("");
-    }
+    }    
 
     function renderWorkExperience(items) {
       return items

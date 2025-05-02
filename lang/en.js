@@ -249,8 +249,9 @@ const enJobsPageData = {
   grants: [
     {
       title: "KAKENHI Grant-in-Aid for Young Scientists",
-      description: "Japan Society for the Promotion of Science, ¥3,700,000",
+      description: "Japan Society for the Promotion of Science, ¥4,810,000",
       duration: "2025 – 2028",
+      link: "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-25K18575/"
     },
   ],
 

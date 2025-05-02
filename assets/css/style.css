@@ -290,6 +290,12 @@
   padding-left: 12px;
 }
 
+.cv_link {
+  color: #2a72c7;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
 .job_item {
   margin-bottom: 20px;
 }
