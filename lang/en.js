@@ -46,23 +46,33 @@ const enPublicationsPageData = {
   type_two_title: "Conference Papers",
   type_two_items: [
     {
-      citation: `Aoyama, J., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K.  (2025). Household task planning with multi-objects state and relationship using LLMs. <em>Proceedings of the 17th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART</em>. <a href="https://10.5220/0013188400003890" target="_blank">https://10.5220/0013188400003890</a>`
+      citation: `Aoyama, J., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K. (2025). Household task planning with multi-objects state and relationship using LLMs. <em>Proceedings of the 17th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART</em>. <a href="https://10.5220/0013188400003890" target="_blank">https://10.5220/0013188400003890</a>`
     },
     {
-      citation: `Anaguchi, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., Reasoning and Justification System for Domestic Hazardous Behaviors Based on Knowledge Graph of Daily Activities and Retrieval-Augmented Generation. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan, 2024. <a href="https://doi: 10.1109/CANDAR64496.2024.00010" target="_blank">https://10.1109/CANDAR64496.2024.00010"</a>`
+      citation: `Anaguchi, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., Reasoning and Justification System for Domestic Hazardous Behaviors Based on Knowledge Graph of Daily Activities and Retrieval-Augmented Generation. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="https://doi: 10.1109/CANDAR64496.2024.00010" target="_blank">https://10.1109/CANDAR64496.2024.00010"</a>`
     },
     {
-      citation: `Mitsuji, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., (2024). Entity linking for Wikidata using LLMs and Wikipedia links. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan, 2024. <a href="https://10.1109/CANDARW64572.2024.00030" target="_blank">https://10.1109/CANDARW64572.2024.00030"</a>`
+      citation: `Mitsuji, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., (2024). Entity linking for Wikidata using LLMs and Wikipedia links. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="https://10.1109/CANDARW64572.2024.00030" target="_blank">https://10.1109/CANDARW64572.2024.00030"</a>`
     }
   ],
 
   type_three_title: "Conference Presentations",
   type_three_items: [
+    {citation:`span class='highlight-author'>Chakraborty, S.</span> (2024). Development of early biomarkers for abnormal aging to extend healthspan. <em>Proceedings of IEEE Humanitarian Activities Workshop with AI Technologies. IEEE WCCI.</em> Yokohama, Japan`},
+    {
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Lee, S.K., Arnold, S.M., Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2024, June). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention. <em>OHBM Annual Meeting</em>, Seoul, Korea.`
+    },
     {
       citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023, July). Multimodal gradients of the human basal forebrain. <em>OHBM Annual Meeting</em>, Montreal, Canada.`
     },
     {
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023, March). Multimodal connectivity gradients. <em>22nd Annual Imaging Network Ontario Symposium</em>, London.`
+    },
+    {
       citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2022, June). Functional connectivity gradients of the human basal forebrain. <em>OHBM Annual Meeting</em>, Hybrid Conference.`
+    },
+    {
+      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2022, June). Functional gradients of basal forebrain. <em>Robarts Research Retreat</em>, London.`
     },
     {
       citation: `<span class='highlight-author'>Chakraborty, S.</span>, Schmitz, T.W., & Khan, A.R. (2020, June). Parcellation of the human basal forebrain using diffusion data. <em>OHBM Annual Meeting</em>, Virtual Conference.`
@@ -71,10 +81,22 @@ const enPublicationsPageData = {
       citation: `Saxon, M., Barkema, D., McKenna, H., Loyer, E., Rader, B., Sridhar, J., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2015). PPA: Research and Clinical Programs. <em>Alzheimer Day</em>, Chicago.`
     },
     {
-      citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2012). Restructuring cognitive schema. <em>SfN Annual Meeting</em>, New Orleans.`
+      citation: `Donley, B.E., <span class='highlight-author'>Chakraborty, S.</span>, de Chastelaine, M., Kennedy, K.M., & Rugg, M.D. (2015). Cortical thickness and cognitive performance. <em>Dallas Aging & Cognition Conference</em>.`
+    },
+    {
+      citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., Yamada, M., Nagaoka, S., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2013, Feb). Brain activity in Socratic method. <em>Japanese Society of Anxiety Disorder Conference</em>, Sapporo.`
     },
     {
       citation: `Hirano, Y., Obata, T., Matsuzawa, D., Sutoh, C., <span class='highlight-author'>Chakraborty, S.</span>, & Shimizu, E. (2012, June). Amygdala activity in anxiety tasks. <em>OHBM</em>, Beijing, China.`
+    },
+    {
+      citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2012). Restructuring cognitive schema. <em>SfN Annual Meeting</em>, New Orleans.`
+    },
+    {
+      citation: `Hamada, H., Sutoh, C., Matsuzawa, D., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, Obata, T., & Shimizu, E. (2012, Sept). Mental rotation vs. imagery. <em>Japan Neuroscience Society</em>, Nagoya.`
+    },
+    {
+      citation: `Stutzman, A.M., <span class='highlight-author'>Chakraborty, S.</span>, Durisko, C., & Fiez, J.A. (2009). Working memory interference. <em>PSLC Colloquium</em>, Pittsburgh.`
     }
   ],
 
@@ -87,24 +109,6 @@ const enPublicationsPageData = {
 
   type_five_title: "Other",
   type_five_items: [
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023, March). Multimodal connectivity gradients. <em>22nd Annual Imaging Network Ontario Symposium</em>, London.`
-    },
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2022, June). Functional gradients of basal forebrain. <em>Robarts Research Retreat</em>, London.`
-    },
-    {
-      citation: `Donley, B.E., <span class='highlight-author'>Chakraborty, S.</span>, de Chastelaine, M., Kennedy, K.M., & Rugg, M.D. (2015). Cortical thickness and cognitive performance. <em>Dallas Aging & Cognition Conference</em>.`
-    },
-    {
-      citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., Yamada, M., Nagaoka, S., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2013, Feb). Brain activity in Socratic method. <em>Japanese Society of Anxiety Disorder Conference</em>, Sapporo.`
-    },
-    {
-      citation: `Hamada, H., Sutoh, C., Matsuzawa, D., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, Obata, T., & Shimizu, E. (2012, Sept). Mental rotation vs. imagery. <em>Japan Neuroscience Society</em>, Nagoya.`
-    },
-    {
-      citation: `Stutzman, A.M., <span class='highlight-author'>Chakraborty, S.</span>, Durisko, C., & Fiez, J.A. (2009). Working memory interference. <em>PSLC Colloquium</em>, Pittsburgh.`
-    }
   ]
 };
 
