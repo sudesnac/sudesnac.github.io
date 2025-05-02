@@ -275,26 +275,26 @@ $(document).ready(function () {
     const jobsData = lang === "en" ? enJobsPageData : faJobsPageData;
 
     document.getElementById("jobs_data").innerHTML = `
-    <section class="cv_section">
-      <h2 class="cv_heading">🎓 Education</h2>
-      ${renderEducation(jobsData.education)}
-    </section>
+  <section class="cv_section">
+    <h2 class="cv_heading">🎓 ${lang === "en" ? "Education" : "学歴"}</h2>
+    ${renderEducation(jobsData.education)}
+  </section>
 
-    <section class="cv_section">
-      <h2 class="cv_heading">🏅 Recognitions</h2>
-      ${renderRecognitions(jobsData.recognitions)}
-    </section>
+  <section class="cv_section">
+    <h2 class="cv_heading">🏅 ${lang === "en" ? "Recognitions" : "受賞"}</h2>
+    ${renderRecognitions(jobsData.recognitions)}
+  </section>
 
-    <section class="cv_section">
-      <h2 class="cv_heading">💰 Grants</h2>
-      ${renderGrants(jobsData.grants)}
-    </section>
+  <section class="cv_section">
+    <h2 class="cv_heading">💰 ${lang === "en" ? "Grants" : "研究資金"}</h2>
+    ${renderGrants(jobsData.grants)}
+  </section>
 
-    <section class="cv_section">
-      <h2 class="cv_heading">💼 Work Experience</h2>
-      ${renderWorkExperience(jobsData.items)}
-    </section>
-  `;
+  <section class="cv_section">
+    <h2 class="cv_heading">💼 ${lang === "en" ? "Work Experience" : "職歴"}</h2>
+    ${renderWorkExperience(jobsData.items)}
+  </section>
+`;
   }
 
   if (pathname === "/jobs") {
