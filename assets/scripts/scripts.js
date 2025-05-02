@@ -104,105 +104,66 @@ $(document).ready(function () {
   }
 
   // Publications page data
-  const setPublicationData = (id, data) => {
-    document.getElementById(id).innerHTML = data
-      .map(
-        (publication) =>
-          `
-        <div class='publications_item'>
-        <div class='publications_header'>
-          ${
-            publication.writers.length > 0
-              ? publication.writers
-                  .map((writer) => `<span>${writer}</span>`)
-                  .join(", ")
-              : ""
-          }
-          ${publication.date ? `<span>(${publication.date}).</span>` : ""}
-          <h2>${publication.title}</h2>
-        </div>
-        <p>${publication.abstract}</p>
-        <ul class='publications_footer'>
-          ${
-            publication.link &&
-            `<li>
-                <a href=${publication.link} target="_blank"> ${
-              lang === "en" ? "View" : "閲覧"
-            } </a>
-              </li>`
-          }
+  function renderPublications(sectionId, items) {
+    const container = document.getElementById(sectionId);
+    container.innerHTML = items
+      .map((item) => {
+        const authors = item.writers
+          .map((writer) =>
+            writer.includes("Chakraborty, S.")
+              ? `<u>${writer}</u>`
+              : writer
+          )
+          .join(", ");
+        return `
+          <div class="publication-item">
+            <p>${authors} (${item.date}). <i>${item.title}</i> ${item.journal}.</p>
             ${
-              publication.github &&
-              `<li>
-                  <a href=${publication.github} target="_blank">  ${
-                lang === "en" ? "Github" : ""
-              }</a>
-                </li>`
+              item.link
+                ? `<p><a href="${item.link}" target="_blank">View Publication</a></p>`
+                : ""
             }
-          
-        </ul>
-      </div>
-     `
-      )
+            ${
+              item.github
+                ? `<p><a href="${item.github}" target="_blank">GitHub Repository</a></p>`
+                : ""
+            }
+          </div>
+        `;
+      })
       .join("");
-  };
-
+  }
+  
   function publicationsData() {
     document.getElementById("page_title").innerText =
       lang === "en" ? "Publications" : "業績";
-
-    document.getElementById("publications_type_one_title").innerHTML =
-      lang === "en"
-        ? enPublicationsPageData.type_one_title
-        : faPublicationsPageData.type_one_title;
-
-    setPublicationData(
-      "publications_type_one_data",
-      lang === "en"
-        ? enPublicationsPageData.type_one_items
-        : faPublicationsPageData.type_one_items
-    );
-
-    document.getElementById("publications_type_two_title").innerHTML =
-      lang === "en"
-        ? enPublicationsPageData.type_two_title
-        : faPublicationsPageData.type_two_title;
-
-    setPublicationData(
-      "publications_type_two_data",
-      lang === "en"
-        ? enPublicationsPageData.type_two_items
-        : faPublicationsPageData.type_two_items
-    );
-
-    document.getElementById("publications_type_three_title").innerHTML =
-      lang === "en"
-        ? enPublicationsPageData.type_three_title
-        : faPublicationsPageData.type_three_title;
-
-    setPublicationData(
-      "publications_type_three_data",
-      lang === "en"
-        ? enPublicationsPageData.type_three_items
-        : faPublicationsPageData.type_three_items
-    );
-
-    document.getElementById("publications_type_four_title").innerHTML =
-      lang === "en"
-        ? enPublicationsPageData.type_four_title
-        : faPublicationsPageData.type_four_title;
-
-    setPublicationData(
-      "publications_type_four_data",
-      lang === "en"
-        ? enPublicationsPageData.type_four_items
-        : faPublicationsPageData.type_four_items
-    );
+  
+    const data = lang === "en" ? enPublicationsPageData : faPublicationsPageData;
+  
+    document.getElementById("publications_type_one_title").innerText =
+      data.type_one_title;
+    renderPublications("publications_type_one_data", data.type_one_items);
+  
+    document.getElementById("publications_type_two_title").innerText =
+      data.type_two_title;
+    renderPublications("publications_type_two_data", data.type_two_items);
+  
+    document.getElementById("publications_type_three_title").innerText =
+      data.type_three_title;
+    renderPublications("publications_type_three_data", data.type_three_items);
+  
+    document.getElementById("publications_type_four_title").innerText =
+      data.type_four_title;
+    renderPublications("publications_type_four_data", data.type_four_items);
+  
+    document.getElementById("publications_type_five_title").innerText =
+      data.type_five_title;
+    renderPublications("publications_type_five_data", data.type_five_items);
   }
-
+  
   if (pathname === "/publications") {
     publicationsData();
-  }
+  }  
 
   // Research page data
   function researchData() {
