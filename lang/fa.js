@@ -108,11 +108,7 @@ const faPublicationsPageData = {
   type_five_title: "外部資金",
   type_five_items: [
     {
-      writers: ["Chakraborty, S."],
-      date: "2025–2028",
-      title: "Gradients of brain organization in naturalistic environment across lifespan",
-      journal: "日本学術振興会 科研費 若手研究, 課題番号：25H01234",
-      link: "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-25H01234/"
+      citation: `<span class='highlight-author'>Chakraborty, S.</span> (2025–2028). <em>Gradients of brain organization in naturalistic environment across lifespan</em>.日本学術振興会 科研費 若手研究, 課題番号：25H01234, 課題番号：	25K18575. <a href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25K18575/" target="_blank">Link</a>`
     },
   ]
 };
