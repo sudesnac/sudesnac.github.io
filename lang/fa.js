@@ -10,13 +10,10 @@ const faNavbarData = {
 const faHomePageData = {
   name: "チャクラボルティ　シュデシナ",
   jobTitle: "青山学院大学理工学部情報テクノロジー学科",
-  home_title: "",
+  home_title: "略歴",
   home_content: ` <div class="about_content">
   <p>
-    私は神経科学者であり、青山学院大学理工学部情報テクノロジー学科の助教として、ヒト脳の構造的および機能的ネットワークに関する研究を行っています。加齢や認知状態に伴う脳の変化を、マルチモーダル脳画像データや自然言語処理の手法を用いて探究しています。
-  </p>
-  <p>
-    カナダのウェスタン大学で博士号（神経科学）を取得し、ヒト基底前部の構造的・機能的接続性を明らかにする研究に従事しました。日本とアメリカの臨床・AI分野での研究経験を持ち、現在は神経科学と言語認知にまたがる分野に取り組んでいます。
+    2023年カナダのウェスタンオンタリオ大学医学部神経科学プログラム大学院博士課程修了．同年，ウェスタンオンタリオ大学Robart Research Institute客員研究員．2024年より青山学院大学理工学部情報テクノロジー学科助教．現在に至る．博士（神経科学）．脳MRI画像を用いた認知神経科学研究に従事．Organization for Human Brain Mapping会員．
   </p>
 </div>
 
@@ -24,7 +21,7 @@ const faHomePageData = {
 };
 
 const faPublicationsPageData = {
-  type_one_title: "Journal Papers",
+  type_one_title: "原著論文",
   type_one_items: [
     {
       citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Onuska, K.M., et al. (2024). Multimodal gradients of basal forebrain connectivity across the neocortex. <em>Nature Communications, 15</em>. <a href="https://doi.org/10.1038/s41467-024-53148-x" target="_blank">https://doi.org/10.1038/s41467-024-53148-x</a>`
@@ -43,7 +40,7 @@ const faPublicationsPageData = {
     }
   ],
 
-  type_two_title: "Conference Papers",
+  type_two_title: "国際会議論文・発表",
   type_two_items: [
     {
       citation: `Aoyama, J., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K. (2025). Household task planning with multi-objects state and relationship using LLMs. <em>Proceedings of the 17th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART</em>. <a href="http://dx.doi.org/10.5220/0013188400003890" target="_blank">http://dx.doi.org/10.5220/0013188400003890</a>`
@@ -53,11 +50,7 @@ const faPublicationsPageData = {
     },
     {
       citation: `Mitsuji, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., (2024). Entity linking for Wikidata using LLMs and Wikipedia links. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="http://dx.doi.org/10.1109/CANDARW64572.2024.00030" target="_blank">http://dx.doi.org/10.1109/CANDARW64572.2024.00030"</a>`
-    }
-  ],
-
-  type_three_title: "Conference Presentations",
-  type_three_items: [
+    },
     {citation:`<span class='highlight-author'>Chakraborty, S.</span> (2024). Development of early biomarkers for abnormal aging to extend healthspan. <em>Proceedings of IEEE Humanitarian Activities Workshop with AI Technologies. IEEE WCCI.</em> Yokohama, Japan`},
     {
       citation: `<span class='highlight-author'>Chakraborty, S.</span>, Lee, S.K., Arnold, S.M., Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2024, June). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention. <em>OHBM Annual Meeting</em>, Seoul, Korea.`
@@ -98,6 +91,11 @@ const faPublicationsPageData = {
     {
       citation: `Stutzman, A.M., <span class='highlight-author'>Chakraborty, S.</span>, Durisko, C., & Fiez, J.A. (2009). Working memory interference. <em>PSLC Colloquium</em>, Pittsburgh.`
     }
+  ],
+
+  type_three_title: "Conference Presentations",
+  type_three_items: [
+    
   ],
 
   type_four_title: "PhD Thesis",

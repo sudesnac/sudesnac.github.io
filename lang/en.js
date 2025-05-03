@@ -2,7 +2,7 @@
 const enNavbarData = {
   title: "Sudesna Chakraborty",
   Home: "Home",
-  publications: "Publications",
+  publications: "Publication",
   Research: "Research",
   Jobs: "CV",
   Contact: "Contact",
