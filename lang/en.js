@@ -120,30 +120,9 @@ const enPublicationsPageData = {
 
 // ---------- Research page data
 const enResearchPageData = {
-  title: "Research",
+  title: "under construction...",
   content: `
-    <div class="research_content">
-  <h3>Current Focus</h3>
-  <p>
-    My research centers on the human basal forebrain, exploring its cholinergic role in cognition using fMRI, diffusion MRI, and advanced computational tools. I also investigate age-related neural changes and develop multimodal biomarkers using neuroimaging and language data.
-  </p>
-
-  <h3>Techniques</h3>
-  <ul>
-    <li>Resting-state & task-based fMRI</li>
-    <li>Diffusion MRI & tractography</li>
-    <li>Neuroanatomical parcellation & gradient analysis</li>
-    <li>Natural language processing (LLMs, narrative fMRI)</li>
-    <li>Multivariate & machine learning methods</li>
-  </ul>
-
-  <h3>Ongoing Projects</h3>
-  <ul>
-    <li>Basal forebrain connectivity and attentional modulation</li>
-    <li>Neural correlates of narrative comprehension and memory</li>
-    <li>Age-related shifts in memory systems and cortical morphology</li>
-  </ul>
-</div>
+    
   `,
 };
 
