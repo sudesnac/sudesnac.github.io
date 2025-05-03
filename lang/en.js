@@ -111,7 +111,7 @@ const enPublicationsPageData = {
     }
   ],
 
-  type_five_title: "Other",
+  type_five_title: "",
   type_five_items: [
   ]
 };

@@ -120,28 +120,31 @@ $(document).ready(function () {
   function publicationsData() {
     document.getElementById("page_title").innerText =
       lang === "en" ? "Publications" : "業績";
-
+  
     const data = lang === "en" ? enPublicationsPageData : faPublicationsPageData;
-
+  
     document.getElementById("publications_type_one_title").innerText =
       data.type_one_title;
-    renderCitations("publications_type_one_data", data.type_one_items);
-
+    renderPublications("publications_type_one_data", data.type_one_items);
+  
     document.getElementById("publications_type_two_title").innerText =
       data.type_two_title;
-    renderCitations("publications_type_two_data", data.type_two_items);
-
+    renderPublications("publications_type_two_data", data.type_two_items);
+  
     document.getElementById("publications_type_three_title").innerText =
       data.type_three_title;
-    renderCitations("publications_type_three_data", data.type_three_items);
-
+    renderPublications("publications_type_three_data", data.type_three_items);
+  
     document.getElementById("publications_type_four_title").innerText =
       data.type_four_title;
-    renderCitations("publications_type_four_data", data.type_four_items);
-
-    document.getElementById("publications_type_five_title").innerText =
-      data.type_five_title;
-    renderCitations("publications_type_five_data", data.type_five_items);
+    renderPublications("publications_type_four_data", data.type_four_items);
+  
+    // Add this block for Japanese only
+    if (lang === "fa") {
+      document.getElementById("publications_type_five_title").innerText =
+        data.type_five_title;
+      renderPublications("publications_type_five_data", data.type_five_items);
+    }
   }
 
   if (pathname === "/publications") {
@@ -163,6 +166,26 @@ $(document).ready(function () {
   if (pathname === "/research") {
     researchData();
   }
+
+  function renderGrants(grants) {
+    return grants
+      .map(
+        (grant) => `
+        <div class='job_item'>
+          <h1>${grant.title}</h1>
+          <p>${grant.description}</p>
+          <p><strong>${grant.duration}</strong></p>
+          ${
+            grant.link
+              ? `<p><a href="${grant.link}" target="_blank" class="cv_link">View</a></p>`
+              : ""
+          }
+        </div>
+      `
+      )
+      .join("");
+  }
+  
 
   // Jobs page data
   function jobsData() {

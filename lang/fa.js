@@ -4,7 +4,7 @@ const faNavbarData = {
   publications: "業績",
   Research: "研究",
   Jobs: "経歴",
-  Contact: "問合せ",
+  Contact: "連絡先",
 };
 
 const faHomePageData = {
@@ -93,20 +93,27 @@ const faPublicationsPageData = {
     }
   ],
 
-  type_three_title: "Conference Presentations",
+  type_three_title: "",
   type_three_items: [
     
   ],
 
-  type_four_title: "PhD Thesis",
+  type_four_title: "博士論文",
   type_four_items: [
     {
       citation: `<span class='highlight-author'>Chakraborty, S.</span> (2023). <em>Multimodal connectivity of the human basal forebrain</em> (Doctoral dissertation). Western University. <a href="https://ir.lib.uwo.ca/etd/9476/" target="_blank">https://ir.lib.uwo.ca/etd/9476/</a>`
     }
   ],
 
-  type_five_title: "Other",
+  type_five_title: "外部資金",
   type_five_items: [
+    {
+      title: "科学研究費助成事業（科研費）:若手研究",
+      description: "日本学術振興会",
+      duration: "2025 – 2028",
+      link: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25K18575/"
+    },
+    // Add more grants as needed
   ]
 };
 
