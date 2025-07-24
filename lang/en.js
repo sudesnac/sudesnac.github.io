@@ -20,14 +20,14 @@ const enHomePageData = {
   </p>
 </div>
   `,
+};
+
 // 
   <p>
   My interdisciplinary research draws on multimodal neuroimaging, and natural language processing to explore how attention, memory, and language comprehension processes are shaped by subcortical structures.  
   I completed my PhD at Western University (Canada), where I studied the connectivity of the human basal forebrain using structural, functional, and microstructural imaging data. I’ve also worked in clinical and AI industry settings in Japan and the US, and I’m currently involved in both neuroscience and language-based cognitive research.
   </p>
 //
-};
-
 
 // ---------- Publications page data
 const enPublicationsPageData = {
