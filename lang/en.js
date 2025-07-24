@@ -16,13 +16,16 @@ const enHomePageData = {
   home_content: `
   <div class="about_content">
   <p>
-    I am a neuroscientist and assistant professor at Aoyama Gakuin University (Department of Integrated Information Technology), with a strong interest in understanding the human brain’s structural and functional networks across aging and cognitive states. My interdisciplinary research draws on multimodal neuroimaging, natural language processing, and data science to explore how attention, memory, and self-related processes are shaped by subcortical structures.
-  </p>
-  <p>
-    I completed my PhD at Western University (Canada), where I studied the connectivity of the human basal forebrain using structural, functional, and microstructural imaging data. I’ve also worked in clinical and AI industry settings in Japan and the US, and I’m currently involved in both neuroscience and language-based cognitive research.
+    I am a neuroscientist and assistant professor at Aoyama Gakuin University (Department of Integrated Information Technology), with a strong interest in understanding the human brain’s structural and functional networks across aging and cognitive states. 
   </p>
 </div>
   `,
+// 
+  <p>
+  My interdisciplinary research draws on multimodal neuroimaging, and natural language processing to explore how attention, memory, and language comprehension processes are shaped by subcortical structures.  
+  I completed my PhD at Western University (Canada), where I studied the connectivity of the human basal forebrain using structural, functional, and microstructural imaging data. I’ve also worked in clinical and AI industry settings in Japan and the US, and I’m currently involved in both neuroscience and language-based cognitive research.
+  </p>
+//
 };
 
 
