@@ -18,7 +18,7 @@ const enHomePageData = {
   <p>
     I am a neuroscientist and assistant professor at Aoyama Gakuin University (Department of Integrated Information Technology), with a strong interest in understanding the human brain’s structural and functional networks across aging and cognitive states. 
   </p>
-</div>
+  </div>
   `,
 };
 
