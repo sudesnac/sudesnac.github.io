@@ -165,6 +165,17 @@ function renderCitations(sectionId, items, numbered = true) {
       data.type_five_title;
     renderCitations("publications_type_five_data", data.type_five_items);
   }
+  document.getElementById("publications_type_one_title").innerText = data.type_one_title;
+  document.getElementById("publications_type_one_title").id = "journal-papers";
+
+  document.getElementById("publications_type_two_title").innerText = data.type_two_title;
+  document.getElementById("publications_type_two_title").id = "conference-papers";
+
+  document.getElementById("publications_type_three_title").innerText = data.type_three_title;
+  document.getElementById("publications_type_three_title").id = "conference-presentations";
+
+  document.getElementById("publications_type_four_title").innerText = data.type_four_title;
+  document.getElementById("publications_type_four_title").id = "phd-thesis";
 
   if (pathname === "/publications") {
     publicationsData();

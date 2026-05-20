@@ -155,7 +155,7 @@ const enJobsPageData = {
       duration: "Sep 2017 – Aug 2023",
       thesisTitle: "Multimodal connectivity of the human basal forebrain",
       supervisors: ["Dr. Ali Khan", "Dr. Taylor Schmitz"],
-      link: "https://ir.lib.uwo.ca/etd/9476/",
+      link: "https://uwo.scholaris.ca/items/45b61f47-6657-45e8-a074-7423dacca1e4",
     },
     {
       degree: "MS in Applied Cognition and Neuroscience",

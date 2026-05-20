@@ -63,6 +63,30 @@
   margin-top: 2rem;
 }
 
+.side-nav {
+  position: sticky;
+  top: 90px; /* adjust depending on your top navbar height */
+  padding: 12px;
+  border-left: 3px solid #eee;
+}
+
+.side-nav-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.side-nav a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.side-nav a:hover {
+  text-decoration: underline;
+}
+
 /* --------- LTR styles --------- */
 
 /* Home page styles */
