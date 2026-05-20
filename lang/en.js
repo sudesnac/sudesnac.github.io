@@ -26,94 +26,114 @@ const enHomePageData = {
 
 // ---------- Publications page data
 const enPublicationsPageData = {
-  type_one_title: "Journal Papers",
-  type_one_items: [
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Onuska, K.M., et al. (2024). Multimodal gradients of basal forebrain connectivity across the neocortex. <em>Nature Communications, 15</em>. <a href="https://doi.org/10.1038/s41467-024-53148-x" target="_blank">https://doi.org/10.1038/s41467-024-53148-x</a>`
-    },
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Lee, S.K., Arnold, S.M., Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention. <em>Journal of Neurochemistry</em>. <a href="https://doi.org/10.1111/jnc.15990" target="_blank">https://doi.org/10.1111/jnc.15990</a>`
-    },
-    {
-      citation: `Hamada, H., Matsuzawa, D., Sutoh, C., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, Ito, H., Tsuji, H., Obata, T., & Shimizu, E. (2018). Comparison of brain activity between motor imagery and mental rotation of the hand tasks. <em>Brain Imaging and Behavior</em>. <a href="https://doi.org/10.1007/s11682-017-9821-9" target="_blank">https://doi.org/10.1007/s11682-017-9821-9</a>`
-    },
-    {
-      citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., Yamada, M., Nagaoka, S., <span class='highlight-author'>Chakraborty, S.</span>, Ishii, D., Matsuda, S., Tomizawa, H., Ito, H., Tsuji, H., Obata, T., & Shimizu, E. (2015). Transient contribution of left posterior parietal cortex to cognitive restructuring. <em>Scientific Reports, 5</em>. <a href="https://doi.org/10.1038/srep09199" target="_blank">https://doi.org/10.1038/srep09199</a>`
-    },
-    {
-      citation: `Kurayama, T., Tadokoro, Y., Fujimoto, S., Komiya, Z., Yoshida, S., <span class='highlight-author'>Chakraborty, S.</span>, Matsuzawa, D., Shimizu, E., Kondo, K., & Otaka, Y. (2013). A comparison of the movement characteristics between the kneeling gait and the normal gait. <em>Gait & Posture, 37</em>(3). <a href="https://doi.org/10.1016/j.gaitpost.2012.08.009" target="_blank">https://doi.org/10.1016/j.gaitpost.2012.08.009</a>`
-    }
-  ],
+ type_one_title: "Journal Papers",
+ type_one_items: [
+ {
+ citation: `Chakraborty, S., Haast, R. A. M., Onuska, K. M., Kanel, P., Prado, M. A. M., Prado, V. F., Khan, A. R., & Schmitz, T. W. (2024). Multimodal gradients of basal forebrain connectivity across the neocortex. *Nature Communications, 15*, Article 8990. https://doi.org/10.1038/s41467-024-53148-x`
+ },
+ {
+ citation: `Chakraborty, S., Lee, S. K., Arnold, S. M., Haast, R. A. M., Khan, A. R., & Schmitz, T. W. (2024). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention: Meta-analytic neuroimaging and behavioral evidence. *Journal of Neurochemistry, 168*(4), 397–413. https://doi.org/10.1111/jnc.15990`
+ },
+ {
+ citation: `Hamada, H., Matsuzawa, D., Sutoh, C., Hirano, Y., Chakraborty, S., Ito, H., Tsuji, H., Obata, T., & Shimizu, E. (2018). Comparison of brain activity between motor imagery and mental rotation of the hand tasks: A functional magnetic resonance imaging study. *Brain Imaging and Behavior, 12*(6), 1596–1606. https://doi.org/10.1007/s11682-017-9821-9`
+ },
+ {
+ citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., Yamada, M., Nagaoka, S., Chakraborty, S., Ishii, D., Matsuda, S., Tomizawa, H., Ito, H., Tsuji, H., Obata, T., & Shimizu, E. (2015). Transient contribution of left posterior parietal cortex to cognitive restructuring. *Scientific Reports, 5*, Article 9199. https://doi.org/10.1038/srep09199`
+ },
+ {
+ citation: `Kurayama, T., Tadokoro, Y., Fujimoto, S., Komiya, Z., Yoshida, S., Chakraborty, S., Matsuzawa, D., Shimizu, E., Kondo, K., & Otaka, Y. (2013). A comparison of the movement characteristics between the kneeling gait and the normal gait in healthy adults. *Gait & Posture, 37*(3), 402–407. https://doi.org/10.1016/j.gaitpost.2012.08.009`
+ }
+ ],
 
-  type_two_title: "Conference Papers",
-  type_two_items: [
-    {
-      citation: `Aoyama, J., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K. (2025). Household task planning with multi-objects state and relationship using LLMs. <em>Proceedings of the 17th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART</em>. <a href="http://dx.doi.org/10.5220/0013188400003890" target="_blank">http://dx.doi.org/10.5220/0013188400003890</a>`
-    },
-    {
-      citation: `Anaguchi, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., Reasoning and Justification System for Domestic Hazardous Behaviors Based on Knowledge Graph of Daily Activities and Retrieval-Augmented Generation. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="http://dx.doi.org/10.1109/CANDAR64496.2024.00010" target="_blank">http://dx.doi.org/10.1109/CANDAR64496.2024.00010"</a>`
-    },
-    {
-      citation: `Mitsuji, F., <span class='highlight-author'>Chakraborty, S.</span>, Morita, T., Egami, S., Ugai, T. and Fukuda, K., (2024). Entity linking for Wikidata using LLMs and Wikipedia links. <em> 2024 Twelfth International Symposium on Computing and Networking (CANDAR)</em>, Naha, Japan. <a href="http://dx.doi.org/10.1109/CANDARW64572.2024.00030" target="_blank">http://dx.doi.org/10.1109/CANDARW64572.2024.00030"</a>`
-    }
-  ],
+ type_two_title: "Conference Papers",
+ type_two_items: [
+ {
+ citation: `Shimoma, H., Chakraborty, S., Morita, T., Ohta, A., Asada, M., Egami, S., Ugai, T., & Hamasaki, M. (2026). RAG-enhanced prompt compression with need-oriented knowledge for dialog-based embodied navigation. *Proceedings of the 18th International Conference on Agents and Artificial Intelligence (ICAART)*, 4, 3055–3062. https://doi.org/10.5220/0014352900004052`
+ },
+ {
+ citation: `Hosokawa, T., Chakraborty, S., & Morita, T. (2025). Assessing logical inference capabilities of large language models through RDF Schema entailment rules: A multi-level evaluation. *Joint Proceedings of Industry, Doctoral Consortium, Posters and Demos of the 24th International Semantic Web Conference (ISWC-C 2025)*, 304–308.`
+ },
+ {
+ citation: `Shimoma, H., Chakraborty, S., & Morita, T. (2025). Prompt compression for dialog navigation with need-oriented environmental knowledge base and large language models. *Joint Proceedings of Industry, Doctoral Consortium, Posters and Demos of the 24th International Semantic Web Conference (ISWC-C 2025)*, 264.`
+ },
+ {
+ citation: `Kawashima, S., & Chakraborty, S. (2025). Neural correlates of sentence comprehension using sentence embedding on narrative fMRI data. *Aperture Neuro*. OHBM 2025 Annual Meeting Abstract Book. https://doi.org/10.5281/zenodo.15641972`
+ },
+ {
+ citation: `Chakraborty, S. (2025). Auditory narrative processing: Cortical gradients in story listening. *Aperture Neuro*. OHBM 2025 Annual Meeting Abstract Book. https://doi.org/10.5281/zenodo.15641972`
+ },
+ {
+ citation: `Aoyama, J., Chakraborty, S., Morita, T., Egami, S., Ugai, T., & Fukuda, K. (2025). Household task planning with multi-objects state and relationship using LLMs. *Proceedings of the 17th International Conference on Agents and Artificial Intelligence (ICAART)*, 2. http://dx.doi.org/10.5220/0013188400003890`
+ },
+ {
+ citation: `Anaguchi, F., Chakraborty, S., Morita, T., Egami, S., Ugai, T., & Fukuda, K. (2024). Reasoning and justification system for domestic hazardous behaviors based on knowledge graph of daily activities and retrieval-augmented generation. *Proceedings of the 12th International Symposium on Computing and Networking (CANDAR 2024)*. https://doi.org/10.1109/CANDAR64496.2024.00010`
+ },
+ {
+ citation: `Mitsuji, F., Chakraborty, S., Morita, T., Egami, S., Ugai, T., & Fukuda, K. (2024). Entity linking for Wikidata using large language models and Wikipedia links. *Proceedings of the 12th International Symposium on Computing and Networking Workshops (CANDARW 2024)*. https://doi.org/10.1109/CANDARW64572.2024.00030`
+ }
+ ],
 
-  type_three_title: "Conference Presentations",
-  type_three_items: [
-    {citation:`<span class='highlight-author'>Chakraborty, S.</span> (2024). Development of early biomarkers for abnormal aging to extend healthspan. <em>Proceedings of IEEE Humanitarian Activities Workshop with AI Technologies. IEEE WCCI.</em> Yokohama, Japan`},
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Lee, S.K., Arnold, S.M., Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2024, June). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention. <em>OHBM Annual Meeting</em>, Seoul, Korea.`
-    },
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023, July). Multimodal gradients of the human basal forebrain. <em>OHBM Annual Meeting</em>, Montreal, Canada.`
-    },
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2023, March). Multimodal connectivity gradients. <em>22nd Annual Imaging Network Ontario Symposium</em>, London.`
-    },
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2022, June). Functional connectivity gradients of the human basal forebrain. <em>OHBM Annual Meeting</em>, Hybrid Conference.`
-    },
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Haast, R.A.M., Khan, A.R., & Schmitz, T.W. (2022, June). Functional gradients of basal forebrain. <em>Robarts Research Retreat</em>, London.`
-    },
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span>, Schmitz, T.W., & Khan, A.R. (2020, June). Parcellation of the human basal forebrain using diffusion data. <em>OHBM Annual Meeting</em>, Virtual Conference.`
-    },
-    {
-      citation: `Saxon, M., Barkema, D., McKenna, H., Loyer, E., Rader, B., Sridhar, J., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2015). PPA: Research and Clinical Programs. <em>Alzheimer Day</em>, Chicago.`
-    },
-    {
-      citation: `Donley, B.E., <span class='highlight-author'>Chakraborty, S.</span>, de Chastelaine, M., Kennedy, K.M., & Rugg, M.D. (2015). Cortical thickness and cognitive performance. <em>Dallas Aging & Cognition Conference</em>.`
-    },
-    {
-      citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., Yamada, M., Nagaoka, S., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2013, Feb). Brain activity in Socratic method. <em>Japanese Society of Anxiety Disorder Conference</em>, Sapporo.`
-    },
-    {
-      citation: `Hirano, Y., Obata, T., Matsuzawa, D., Sutoh, C., <span class='highlight-author'>Chakraborty, S.</span>, & Shimizu, E. (2012, June). Amygdala activity in anxiety tasks. <em>OHBM</em>, Beijing, China.`
-    },
-    {
-      citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, et al. (2012). Restructuring cognitive schema. <em>SfN Annual Meeting</em>, New Orleans.`
-    },
-    {
-      citation: `Hamada, H., Sutoh, C., Matsuzawa, D., Hirano, Y., <span class='highlight-author'>Chakraborty, S.</span>, Obata, T., & Shimizu, E. (2012, Sept). Mental rotation vs. imagery. <em>Japan Neuroscience Society</em>, Nagoya.`
-    },
-    {
-      citation: `Stutzman, A.M., <span class='highlight-author'>Chakraborty, S.</span>, Durisko, C., & Fiez, J.A. (2009). Working memory interference. <em>PSLC Colloquium</em>, Pittsburgh.`
-    }
-  ],
+ type_three_title: "Conference Presentations",
+ type_three_items: [
+  {
+ citation: `Kawashima, S., & Chakraborty, S. (2025, June). Neural correlates of sentence comprehension using sentence embedding on narrative fMRI data. *OHBM Annual Meeting*, Brisbane, Australia.`
+ },
+ {
+ citation: `Chakraborty, S. (2025, June). Auditory narrative processing: Cortical gradients in story listening. *OHBM Annual Meeting*, Brisbane, Australia.`
+ },
+ {citation:`Chakraborty, S. (2024). Development of early biomarkers for abnormal aging to extend healthspan. *Proceedings of IEEE Humanitarian Activities Workshop with AI Technologies (IEEE WCCI)*, Yokohama, Japan.`},
+ {
+ citation: `Chakraborty, S., Lee, S. K., Arnold, S. M., Haast, R. A. M., Khan, A. R., & Schmitz, T. W. (2024, June). Focal acetylcholinergic modulation of the human midcingulo-insular network during attention. *OHBM Annual Meeting*, Seoul, Korea.`
+ },
+ {
+ citation: `Chakraborty, S., Haast, R. A. M., Khan, A. R., & Schmitz, T. W. (2023, July). Multimodal gradients of the human basal forebrain. *OHBM Annual Meeting*, Montreal, Canada.`
+ },
+ {
+ citation: `Chakraborty, S., Haast, R. A. M., Khan, A. R., & Schmitz, T. W. (2023, March). Multimodal connectivity gradients of the human basal forebrain. *22nd Annual Imaging Network Ontario Symposium*, London, Ontario, Canada.`
+ },
+ {
+ citation: `Chakraborty, S., Haast, R. A. M., Khan, A. R., & Schmitz, T. W. (2022, June). Functional connectivity gradients of the human basal forebrain reveal rostrocaudal organization. *OHBM Annual Meeting*, Hybrid conference.`
+ },
+ {
+ citation: `Chakraborty, S., Haast, R. A. M., Khan, A. R., & Schmitz, T. W. (2022, June). Functional connectivity gradients of the human basal forebrain reveal rostrocaudal organization. *Robarts Research Retreat*, London, Ontario, Canada.`
+ },
+ {
+ citation: `Chakraborty, S., Schmitz, T. W., & Khan, A. R. (2020, June). Parcellation of the human basal forebrain based on diffusion-weighted structural connectivity data. *OHBM Annual Meeting*, Virtual conference.`
+ },
+ {
+ citation: `Saxon, M., Barkema, D., McKenna, H., Loyer, E., Rader, B., Sridhar, J., Chakraborty, S., et al. (2015). Primary Progressive Aphasia (PPA): Research and clinical programs at Northwestern University. *Alzheimer Day*, Chicago, IL, USA.`
+ },
+ {
+ citation: `Donley, B. E., Chakraborty, S., de Chastelaine, M., Kennedy, K. M., & Rugg, M. D. (2015). Relation between cortical thickness and cognitive performance as a function of age and intra-scan motion. *Dallas Aging & Cognition Conference*, Dallas, TX, USA.`
+ },
+ {
+ citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., Yamada, M., Nagaoka, S., Chakraborty, S., et al. (2013, February). Brain activities related to cognitive restructuring using the Socratic method: An fMRI study. *Japanese Society of Anxiety Disorder Academic Conference*, Sapporo, Japan.`
+ },
+ {
+ citation: `Hirano, Y., Obata, T., Matsuzawa, D., Sutoh, C., Chakraborty, S., & Shimizu, E. (2012, June). Evaluation of the anxiety tasks to assess amygdala activities using fMRI. *OHBM Annual Meeting*, Beijing, China.`
+ },
+ {
+ citation: `Sutoh, C., Matsuzawa, D., Hirano, Y., Chakraborty, S., et al. (2012, October). A dynamic fMRI study of restructuring cognitive schema for dirtiness. *Society for Neuroscience Annual Meeting (SfN)*, New Orleans, LA, USA.`
+ },
+ {
+ citation: `Hamada, H., Sutoh, C., Matsuzawa, D., Hirano, Y., Chakraborty, S., Obata, T., & Shimizu, E. (2012, September). Characteristic brain activities during mental rotation and motor imagery: An fMRI study. *Japan Neuroscience Society Annual Meeting*, Nagoya, Japan.`
+ },
+ {
+ citation: `Stutzman, A. M., Chakraborty, S., Durisko, C., & Fiez, J. A. (2009). Effects of concurrent task performance on working memory. *Pittsburgh Science of Learning Center (PSLC) Colloquium*, Pittsburgh, PA, USA.`
+ }
+ ],
 
-  type_four_title: "PhD Thesis",
-  type_four_items: [
-    {
-      citation: `<span class='highlight-author'>Chakraborty, S.</span> (2023). <em>Multimodal connectivity of the human basal forebrain</em> (Doctoral dissertation). Western University. <a href="https://ir.lib.uwo.ca/etd/9476/" target="_blank">https://ir.lib.uwo.ca/etd/9476/</a>`
-    }
-  ],
+ type_four_title: "PhD Thesis",
+ type_four_items: [
+ {
+ citation: `Chakraborty, S. (2023). *Multimodal connectivity of the human basal forebrain* (Doctoral dissertation, Western University). https://ir.lib.uwo.ca/etd/9476/`
+ }
+ ],
 
-  type_five_title: "",
-  type_five_items: [
-  ]
+ type_five_title: "",
+ type_five_items: [
+ ]
 };
-
 
 
 // ---------- Research page data
