@@ -110,14 +110,24 @@ $(document).ready(function () {
     .replaceAll("Chakraborty, Sudesna", `<span class="fw-bold">Chakraborty, Sudesna</span>`);
 }
 
-function renderCitations(sectionId, items) {
+function formatCitation(html) {
+  // Markdown-style italics *...* → HTML italics <em>...</em>
+  // (non-greedy, handles multiple italic segments)
+  return html.replace(/\*(.+?)\*/g, "<em>$1</em>");
+}
+
+function renderCitations(sectionId, items, numbered = true) {
   const container = document.getElementById(sectionId);
+
+  const listTag = numbered ? "ol" : "ul";
+  const listClass = numbered ? "ps-3" : "ps-3 list-unstyled"; // or just "ps-3"
+
   container.innerHTML = `
-    <ol class="ps-3">
+    <${listTag} class="${listClass}">
       ${items
-        .map((item) => `<li class="mb-2">${highlightName(item.citation)}</li>`)
+        .map((item) => `<li class="mb-2">${highlightName(formatCitation(item.citation))}</li>`)
         .join("")}
-    </ol>
+    </${listTag}>
   `;
 }
 
@@ -142,7 +152,7 @@ function renderCitations(sectionId, items) {
 
     document.getElementById("publications_type_four_title").innerText =
       data.type_four_title;
-    renderCitations("publications_type_four_data", data.type_four_items);
+    renderCitations("publications_type_four_data", data.type_four_items, false);
 
     document.getElementById("publications_type_five_title").innerText =
       data.type_five_title;
