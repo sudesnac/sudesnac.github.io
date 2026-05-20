@@ -173,6 +173,8 @@ $(document).ready(function () {
 			lang === "en" ? "Publications" : "業績";
 
 		const data = lang === "en" ? enPublicationsPageData : faPublicationsPageData;
+    const sideTitle = document.getElementById("side_nav_title");
+      if (sideTitle) {sideTitle.innerText = lang === "en" ? "Publications" : "業績";}
 
     // Left sidebar labels (match language file titles)
     const side1 = document.getElementById("side_journal");
