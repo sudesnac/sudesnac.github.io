@@ -147,7 +147,7 @@ const faJobsPageData = {
       duration: "Sep 2017 – Aug 2023",
       thesisTitle: "Multimodal connectivity of the human basal forebrain",
       supervisors: ["Dr. Ali Khan", "Dr. Taylor Schmitz"],
-      link: "https://ir.lib.uwo.ca/etd/9476/",
+      link: "https://uwo.scholaris.ca/items/45b61f47-6657-45e8-a074-7423dacca1e4",
     },
     {
       degree: "MS in Applied Cognition and Neuroscience",
@@ -177,14 +177,16 @@ const faJobsPageData = {
       title: "KAKENHI Grant-in-Aid for Young Scientists",
       description: "Japan Society for the Promotion of Science, ¥4,810,000",
       duration: "2025 – 2028",
-      link: "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-25K18575/"
+      link: "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-25K18575/",
     },
   ],
 
   items: [
+    // ===== Academic =====
     {
       title: "Assistant Professor",
       company: "Aoyama Gakuin University, College of Science and Engineering",
+      category: "Academic",
       startData: "April 2024",
       endDate: null,
       location: "Japan",
@@ -194,6 +196,7 @@ const faJobsPageData = {
     {
       title: "Associated Research Staff (Honorary Position)",
       company: "Robarts Research Institute, Western University",
+      category: "Academic",
       startData: "Sep 2023",
       endDate: null,
       location: "Canada",
@@ -203,6 +206,7 @@ const faJobsPageData = {
     {
       title: "PhD Researcher",
       company: "Western University",
+      category: "Academic",
       startData: "May 2019",
       endDate: "Aug 2023",
       location: "Canada",
@@ -210,8 +214,21 @@ const faJobsPageData = {
       achievements: ["Supervised by Dr. Ali Khan and Dr. Taylor Schmitz"],
     },
     {
+      title: "PhD Researcher",
+      company: "Western University",
+      category: "Academic",
+      startData: "Aug 2017",
+      endDate: "Apr 2019",
+      location: "Canada",
+      abstract: "Hippocampus plasticity in treatment of MDD with ECT",
+      achievements: ["Supervised by Dr. Stefan Kohler and Dr. Ali Khan"],
+    },
+
+    // ===== Teaching =====
+    {
       title: "Teaching Assistant",
       company: "Western University",
+      category: "Teaching",
       startData: "Aug 2018",
       endDate: "Dec 2018",
       location: "Canada",
@@ -221,24 +238,19 @@ const faJobsPageData = {
     {
       title: "Teaching Assistant",
       company: "Western University",
+      category: "Teaching",
       startData: "Aug 2017",
       endDate: "Apr 2018",
       location: "Canada",
       abstract: "Introduction to Psychology (Psych 1000)",
       achievements: ["Office hours, grading, review sessions"],
     },
-    {
-      title: "PhD Researcher",
-      company: "Western University",
-      startData: "Aug 2017",
-      endDate: "Apr 2019",
-      location: "Canada",
-      abstract: "Hippocampus plasticity in treatment of MDD with ECT",
-      achievements: ["Supervised by Dr. Stefan Kohler and Dr. Ali Khan"],
-    },
+
+    // ===== Non-academic =====
     {
       title: "Senior Consultant",
       company: "NTT DATA Institute of Management Consulting, Inc.",
+      category: "Non-academic",
       startData: "Apr 2016",
       endDate: "Jun 2017",
       location: "Japan",
@@ -248,15 +260,19 @@ const faJobsPageData = {
     {
       title: "Researcher",
       company: "Araya Brain Imaging Inc.",
+      category: "Non-academic",
       startData: "Aug 2015",
       endDate: "Mar 2016",
       location: "Japan",
       abstract: "MRI and DTI processing using MATLAB, FSL, FreeSurfer, SPM12",
       achievements: [],
     },
+
+    // ===== Academic (continued) =====
     {
       title: "Research Assistant",
       company: "Northwestern University",
+      category: "Academic",
       startData: "Jan 2015",
       endDate: "Jul 2015",
       location: "USA",
@@ -266,6 +282,7 @@ const faJobsPageData = {
     {
       title: "Research Assistant",
       company: "University of Texas at Dallas",
+      category: "Academic",
       startData: "Aug 2013",
       endDate: "Dec 2014",
       location: "USA",
@@ -275,6 +292,7 @@ const faJobsPageData = {
     {
       title: "Research Assistant",
       company: "Chiba University",
+      category: "Academic",
       startData: "Jun 2011",
       endDate: "Jul 2012",
       location: "Japan",
@@ -284,6 +302,7 @@ const faJobsPageData = {
     {
       title: "Research Assistant",
       company: "National Institute of Radiological Science",
+      category: "Academic",
       startData: "Dec 2010",
       endDate: "Mar 2011",
       location: "Japan",
@@ -293,15 +312,19 @@ const faJobsPageData = {
     {
       title: "Research Assistant",
       company: "University of Pittsburgh",
+      category: "Academic",
       startData: "Sep 2008",
       endDate: "May 2010",
       location: "USA",
       abstract: "fMRI and behavioral studies on working memory and reading",
       achievements: [],
     },
+
+    // ===== Other =====
     {
       title: "Volunteer Translator",
       company: "IEEE Japan Council Women in Engineering",
+      category: "Other",
       startData: "May 2009",
       endDate: "May 2011",
       location: "Japan",
@@ -311,16 +334,17 @@ const faJobsPageData = {
     {
       title: "Neurology Intern",
       company: "Iwate Medical University",
+      category: "Other",
       startData: "May 2008",
       endDate: "Aug 2008",
       location: "Japan",
       abstract: "MRI and psychiatric evaluations for Alzheimer’s and Parkinson’s patients",
       achievements: [],
     },
-  
     {
       title: "Library Assistant",
       company: "University of Pittsburgh, East Asian Library",
+      category: "Other",
       startData: "Jun 2007",
       endDate: "Apr 2008",
       location: "USA",

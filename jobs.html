@@ -27,10 +27,36 @@
   <body>
     <div id="include_navbar"></div>
 
-    <div class="container pt-4" data-aos="fade-in" id="content_wrapper">
-      <h1 id="jobs_title" class="title"></h1>
-      <div id="jobs_data"></div>
-    </div>
+<div class="container pt-4" data-aos="fade-in">
+	<div class="row">
+		<!-- Left nav -->
+		<aside class="col-12 col-md-3 mb-3">
+			<nav class="side-nav">
+				<div id="cv_side_nav_title" class="side-nav-title">CV</div>
+
+				<a id="cv_nav_education" href="#cv-education">Education</a>
+				<a id="cv_nav_recognitions" href="#cv-recognitions">Recognitions</a>
+				<a id="cv_nav_grants" href="#cv-grants">Grants</a>
+				<a id="cv_nav_work" href="#cv-work">Work experience</a>
+
+				<div class="side-nav-divider"></div>
+
+				<a id="cv_nav_work_academic" href="#cv-work-academic">Academic</a>
+				<a id="cv_nav_work_teaching" href="#cv-work-teaching">Teaching</a>
+				<a id="cv_nav_work_nonacademic" href="#cv-work-nonacademic">Non-academic</a>
+				<a id="cv_nav_work_other" href="#cv-work-other">Other</a>
+			</nav>
+		</aside>
+
+		<!-- Main content -->
+		<main class="col-12 col-md-9" id="content_wrapper">
+			<h1 id="page_title" class="title"></h1>
+
+			<h2 id="jobs_title" class="cv_page_title"></h2>
+			<div id="jobs_data"></div>
+		</main>
+	</div>
+  </div>
   </body>
 
   <script src="./assets/scripts/scripts.js"></script>

@@ -245,102 +245,173 @@ $(document).ready(function () {
 	}
 
 	// Jobs page data
-	function jobsData() {
-		document.getElementById("page_title").innerText =
-			lang === "en" ? "Jobs" : "経歴";
+  function jobsData() {
+    // Title at top (browser content area)
+    document.getElementById("page_title").innerText =
+      lang === "en" ? "CV" : "経歴";
 
-		document.getElementById("jobs_title").innerHTML =
-			lang === "en" ? enJobsPageData.title : faJobsPageData.title;
+    const jobsDataObj = lang === "en" ? enJobsPageData : faJobsPageData;
 
-		function renderEducation(education) {
-			return education
-				.map(
-					(edu) => `
-						<div class="mb-3">
-							<div class="fw-bold">${edu.degree}</div>
-							<div>${edu.institution}</div>
-							<div class="text-muted">${edu.duration}</div>
-							${edu.thesisTitle ? `<div>Thesis: ${edu.thesisTitle}</div>` : ""}
-							${edu.supervisors ? `<div>Supervisors: ${edu.supervisors.join(", ")}</div>` : ""}
-							${edu.link ? `<div><a href="${edu.link}" target="_blank" rel="noopener noreferrer">View Thesis</a></div>` : ""}
-						</div>
-					`,
-				)
-				.join("");
-		}
+    // Page heading inside content
+    document.getElementById("jobs_title").innerText = jobsDataObj.title;
 
-		function renderRecognitions(recognitions) {
-			return recognitions
-				.map(
-					(rec) => `
-						<div class="mb-3">
-							<div class="fw-bold">${rec.title}</div>
-							<div>${rec.description}</div>
-						</div>
-					`,
-				)
-				.join("");
-		}
+    // Localize left sidebar labels (only if the ids exist in jobs.html)
+    const sideTitle = document.getElementById("cv_side_nav_title");
+    if (sideTitle) sideTitle.innerText = lang === "en" ? "CV" : "経歴";
 
-		function renderGrants(grants) {
-			return grants
-				.map(
-					(grant) => `
-						<div class="mb-3">
-							<div class="fw-bold">${grant.title}</div>
-							<div>${grant.description}</div>
-							<div class="text-muted">${grant.duration}</div>
-							${grant.link ? `<div><a href="${grant.link}" target="_blank" rel="noopener noreferrer">View</a></div>` : ""}
-						</div>
-					`,
-				)
-				.join("");
-		}
+    const setSide = (id, text) => {
+      const el = document.getElementById(id);
+      if (el) el.innerText = text;
+    };
 
-		function renderWorkExperience(items) {
-			return items
-				.map(
-					(job) => `
-						<div class="mb-4">
-							<div class="fw-bold">${job.title}</div>
-							<div>${job.company}${job.location ? `, ${job.location}` : ""}</div>
-							<div class="text-muted">${job.startData} - ${
-								job.endDate ? job.endDate : lang === "en" ? "Now" : "現在"
-							}</div>
-							${job.abstract ? `<div class="mt-2">${job.abstract}</div>` : ""}
-							${
-								job.achievements && job.achievements.length > 0
-									? `<ul class="mt-2">${job.achievements
-											.map((a) => `<li>${a}</li>`)
-											.join("")}</ul>`
-									: ""
-							}
-						</div>
-					`,
-				)
-				.join("");
-		}
+    setSide("cv_nav_education", lang === "en" ? "Education" : "学歴");
+    setSide("cv_nav_recognitions", lang === "en" ? "Recognitions" : "受賞");
+    setSide("cv_nav_grants", lang === "en" ? "Grants" : "研究費");
+    setSide("cv_nav_work", lang === "en" ? "Work experience" : "職歴");
 
-		const jobsDataObj = lang === "en" ? enJobsPageData : faJobsPageData;
+    setSide("cv_nav_work_academic", lang === "en" ? "Academic" : "学術");
+    setSide("cv_nav_work_teaching", lang === "en" ? "Teaching" : "教育");
+    setSide("cv_nav_work_nonacademic", lang === "en" ? "Non-academic" : "企業・非学術");
+    setSide("cv_nav_work_other", lang === "en" ? "Other" : "その他");
 
-		document.getElementById("jobs_data").innerHTML = `
-			<h3 class="mt-3">🎓 ${lang === "en" ? "Education" : "学歴"}</h3>
-			${renderEducation(jobsDataObj.education)}
+    // Helpers
+    function renderEducation(education) {
+      return education
+        .map(
+          (edu) => `
+            <div class="cv_item">
+              <div class="cv_item_header">
+                <div class="cv_item_title">${edu.degree}</div>
+                <div class="cv_item_meta">${edu.duration ?? ""}</div>
+              </div>
+              <div class="cv_item_subtitle">${edu.institution ?? ""}</div>
+              ${edu.thesisTitle ? `<div class="cv_item_text"><span class="fw-bold">Thesis:</span> ${edu.thesisTitle}</div>` : ""}
+              ${edu.supervisors ? `<div class="cv_item_text"><span class="fw-bold">Supervisors:</span> ${edu.supervisors.join(", ")}</div>` : ""}
+              ${edu.link ? `<div class="cv_item_text"><a class="cv_link" href="${edu.link}" target="_blank" rel="noopener noreferrer">View</a></div>` : ""}
+            </div>
+          `,
+        )
+        .join("");
+    }
 
-			<h3 class="mt-4">🏅 ${lang === "en" ? "Recognitions" : "受賞"}</h3>
-			${renderRecognitions(jobsDataObj.recognitions)}
+    function renderRecognitions(recognitions) {
+      return recognitions
+        .map(
+          (rec) => `
+            <div class="cv_item">
+              <div class="cv_item_header">
+                <div class="cv_item_title">${rec.title ?? ""}</div>
+              </div>
+              <div class="cv_item_text">${rec.description ?? ""}</div>
+            </div>
+          `,
+        )
+        .join("");
+    }
 
-			<h3 class="mt-4">💰 ${lang === "en" ? "Grants" : "研究資金"}</h3>
-			${renderGrants(jobsDataObj.grants)}
+    function renderGrants(grants) {
+      return grants
+        .map(
+          (grant) => `
+            <div class="cv_item">
+              <div class="cv_item_header">
+                <div class="cv_item_title">${grant.title ?? ""}</div>
+                <div class="cv_item_meta">${grant.duration ?? ""}</div>
+              </div>
+              <div class="cv_item_text">${grant.description ?? ""}</div>
+              ${grant.link ? `<div class="cv_item_text"><a class="cv_link" href="${grant.link}" target="_blank" rel="noopener noreferrer">View</a></div>` : ""}
+            </div>
+          `,
+        )
+        .join("");
+    }
 
-			<h3 class="mt-4">💼 ${lang === "en" ? "Work Experience" : "職歴"}</h3>
-			${renderWorkExperience(jobsDataObj.items)}
-		`;
-	}
+    function renderWorkExperience(items) {
+      return items
+        .map(
+          (job) => `
+            <div class="cv_item">
+              <div class="cv_item_header">
+                <div class="cv_item_title">${job.title ?? ""}</div>
+                <div class="cv_item_meta">
+                  ${job.startData ?? ""}${job.startData ? " – " : ""}${
+                    job.endDate ? job.endDate : lang === "en" ? "Now" : "現在"
+                  }
+                </div>
+              </div>
+              <div class="cv_item_subtitle">
+                ${job.company ?? ""}${job.location ? `, ${job.location}` : ""}
+              </div>
+              ${job.abstract ? `<div class="cv_item_text">${job.abstract}</div>` : ""}
+              ${
+                job.achievements && job.achievements.length > 0
+                  ? `<ul class="cv_item_list">${job.achievements
+                      .map((a) => `<li>${a}</li>`)
+                      .join("")}</ul>`
+                  : ""
+              }
+            </div>
+          `,
+        )
+        .join("");
+    }
 
-	if (pathname === "/jobs") {
-		jobsData();
-	}
+    // Grouping (Option A: relies on job.category)
+    const workItems = Array.isArray(jobsDataObj.items) ? jobsDataObj.items : [];
+
+    const byCat = (cat) => workItems.filter((j) => (j.category ?? "") === cat);
+
+    const academic = byCat("Academic");
+    const teaching = byCat("Teaching");
+    const nonAcademic = byCat("Non-academic");
+    const other = byCat("Other");
+
+    // Render
+    document.getElementById("jobs_data").innerHTML = `
+      <section class="cv_section" id="cv-education">
+        <h3 class="cv_heading">${lang === "en" ? "🎓 Education" : "🎓 学歴"}</h3>
+        ${renderEducation(jobsDataObj.education || [])}
+      </section>
+
+      <section class="cv_section" id="cv-recognitions">
+        <h3 class="cv_heading">${lang === "en" ? "🏅 Recognitions" : "🏅 受賞"}</h3>
+        ${renderRecognitions(jobsDataObj.recognitions || [])}
+      </section>
+
+      <section class="cv_section" id="cv-grants">
+        <h3 class="cv_heading">${lang === "en" ? "💰 Grants" : "💰 研究費"}</h3>
+        ${renderGrants(jobsDataObj.grants || [])}
+      </section>
+
+      <section class="cv_section" id="cv-work">
+        <h3 class="cv_heading">${lang === "en" ? "💼 Work experience" : "💼 職歴"}</h3>
+
+        <div class="cv_subsection" id="cv-work-academic">
+          <h4 class="cv_subheading">${lang === "en" ? "Academic" : "学術"}</h4>
+          ${renderWorkExperience(academic)}
+        </div>
+
+        <div class="cv_subsection" id="cv-work-teaching">
+          <h4 class="cv_subheading">${lang === "en" ? "Teaching" : "教育"}</h4>
+          ${renderWorkExperience(teaching)}
+        </div>
+
+        <div class="cv_subsection" id="cv-work-nonacademic">
+          <h4 class="cv_subheading">${lang === "en" ? "Non-academic" : "企業・非学術"}</h4>
+          ${renderWorkExperience(nonAcademic)}
+        </div>
+
+        <div class="cv_subsection" id="cv-work-other">
+          <h4 class="cv_subheading">${lang === "en" ? "Other" : "その他"}</h4>
+          ${renderWorkExperience(other)}
+        </div>
+      </section>
+    `;
+  }
+
+  if (pathname === "/jobs") {
+    jobsData();
+  }
 
 	// Contact page data
 	const contact_data = {

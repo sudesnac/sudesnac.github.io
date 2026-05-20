@@ -295,6 +295,83 @@
   margin-bottom: 5px;
 }
 
+/* Sidebar divider (used in CV left nav) */
+.side-nav-divider {
+  height: 1px;
+  background: #eee;
+  margin: 10px 0;
+}
+
+/* CV page improvements */
+.cv_page_title {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.cv_subsection {
+  margin-top: 18px;
+}
+
+.cv_subheading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 14px 0 10px;
+  padding-left: 10px;
+  border-left: 4px solid rgba(64, 120, 192, 0.35);
+}
+
+.cv_item {
+  padding: 12px 14px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 12px;
+}
+
+.cv_item_header {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.cv_item_title {
+  font-weight: 700;
+}
+
+.cv_item_meta {
+  color: #777;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.cv_item_subtitle {
+  color: #555;
+  margin-top: 2px;
+}
+
+.cv_item_text {
+  margin-top: 6px;
+}
+
+.cv_item_list {
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .cv_item_header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cv_item_meta {
+    white-space: normal;
+  }
+}
+
 /* Contact page styles */
 #contact_data {
   list-style: none;
