@@ -128,13 +128,24 @@ $(document).ready(function () {
 	}
 
 	function linkifyUrls(html) {
-		// linkify DOI + any https://... URL (including uwo.scholaris.ca)
-		return html.replace(
-			/\bhttps?:\/\/[^\s<]+/g,
-			(url) =>
-				`<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`,
-		);
-	}
+  return html.replace(
+    /\bhttps?:\/\/[^\s<]+/g,
+    (url) => {
+      // Show short link text for your thesis page
+      if (url.startsWith("https://uwo.scholaris.ca/items/")) {
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">View</a>`;
+      }
+
+      // (optional) also shorten UWO IR thesis links
+      if (url.startsWith("https://ir.lib.uwo.ca/etd/")) {
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">View</a>`;
+      }
+
+      // default: show the URL as text
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+    }
+  );
+}
 
 	function renderCitations(sectionId, items, numbered = true) {
 		const container = document.getElementById(sectionId);
@@ -162,6 +173,19 @@ $(document).ready(function () {
 			lang === "en" ? "Publications" : "業績";
 
 		const data = lang === "en" ? enPublicationsPageData : faPublicationsPageData;
+
+    // Left sidebar labels (match language file titles)
+    const side1 = document.getElementById("side_journal");
+      if (side1) side1.innerText = data.type_one_title;
+
+    const side2 = document.getElementById("side_conf_papers");
+      if (side2) side2.innerText = data.type_two_title;
+
+    const side3 = document.getElementById("side_conf_pres");
+      if (side3) side3.innerText = data.type_three_title;
+
+    const side4 = document.getElementById("side_thesis");
+      if (side4) side4.innerText = data.type_four_title;
 
 		// Section titles + anchors
 		const t1 = document.getElementById("publications_type_one_title");
