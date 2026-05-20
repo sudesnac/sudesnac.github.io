@@ -246,12 +246,12 @@ $(document).ready(function () {
             <div>
               <h1>${job.title}</h1>
               <h2>${job.company}</h2>
+              <span class='job_location'>${job.location}</span>
             </div>
             <div>
               <span>${job.startData} - ${
             job.endDate ? job.endDate : lang === "en" ? "Now" : "現在"
           }</span>
-              <span class='job_location'>${job.location}</span>
             </div>
           </div>
           <p>${job.abstract}</p>
