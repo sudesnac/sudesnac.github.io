@@ -124,11 +124,11 @@ const enPublicationsPageData = {
  ],
 
  type_four_title: "PhD Thesis",
- type_four_items: [
- {
- citation: `Chakraborty, S. (2023). *Multimodal connectivity of the human basal forebrain* (Doctoral dissertation, Western University). https://ir.lib.uwo.ca/etd/9476/`
- }
- ],
+type_four_items: [
+  {
+    citation: `Chakraborty, S. (2023). *Multimodal connectivity of the human basal forebrain* (Doctoral dissertation, Western University). https://uwo.scholaris.ca/items/45b61f47-6657-45e8-a074-7423dacca1e4 `
+  }
+],
 
  type_five_title: "",
  type_five_items: [
