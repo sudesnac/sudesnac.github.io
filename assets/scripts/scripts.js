@@ -245,7 +245,7 @@ $(document).ready(function () {
           <div class='job_header'>
             <div>
               <h1>${job.title}</h1>
-              <h2>${job.company}<span class='job_location'>${job.location}</span></h2>
+              <h2>${job.company}${job.location}</h2>
             </div>
             <div>
               <span>${job.startData} - ${
