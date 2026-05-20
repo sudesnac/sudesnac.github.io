@@ -14,15 +14,15 @@ $(document).ready(function () {
         url: "/",
       },
       {
+        active: navbarLinks.research ? true : false,
+        title: lang === "fa" ? faNavbarData.Research : enNavbarData.Research,
+        url: "/research.html",
+      },
+      {
         active: navbarLinks.publications ? true : false,
         title:
           lang === "fa" ? faNavbarData.publications : enNavbarData.publications,
         url: "/publications.html",
-      },
-      {
-        active: navbarLinks.research ? true : false,
-        title: lang === "fa" ? faNavbarData.Research : enNavbarData.Research,
-        url: "/research.html",
       },
       {
         active: navbarLinks.jobs ? true : false,
