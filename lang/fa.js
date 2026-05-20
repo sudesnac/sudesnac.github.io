@@ -205,7 +205,7 @@ const faJobsPageData = {
     },
     {
       title: "博士課程研究員（PhD Researcher）",
-      company: "Western University",
+      company: "ウェスタンオンタリオ大学",
       category: "Academic",
       startData: "2019年5月",
       endDate: "2023年8月",
@@ -215,7 +215,7 @@ const faJobsPageData = {
     },
     {
       title: "博士課程研究員（PhD Researcher）",
-      company: "Western University",
+      company: "ウェスタンオンタリオ大学",
       category: "Academic",
       startData: "2017年8月",
       endDate: "2019年4月",
@@ -227,7 +227,7 @@ const faJobsPageData = {
     // ===== Teaching =====
     {
       title: "ティーチング・アシスタント（TA）",
-      company: "Western University",
+      company: "ウェスタンオンタリオ大学",
       category: "Teaching",
       startData: "2018年8月",
       endDate: "2018年12月",
@@ -237,7 +237,7 @@ const faJobsPageData = {
     },
     {
       title: "ティーチング・アシスタント（TA）",
-      company: "Western University",
+      company: "ウェスタンオンタリオ大学",
       category: "Teaching",
       startData: "2017年8月",
       endDate: "2018年4月",
@@ -271,7 +271,7 @@ const faJobsPageData = {
     // ===== Academic (continued) =====
     {
       title: "リサーチ・アシスタント（RA）",
-      company: "Northwestern University",
+      company: "ノースウェスタン大学",
       category: "Academic",
       startData: "2015年1月",
       endDate: "2015年7月",
@@ -281,7 +281,7 @@ const faJobsPageData = {
     },
     {
       title: "リサーチ・アシスタント（RA）",
-      company: "University of Texas at Dallas",
+      company: "テキサス大学ダラス校",
       category: "Academic",
       startData: "2013年8月",
       endDate: "2014年12月",
@@ -311,7 +311,7 @@ const faJobsPageData = {
     },
     {
       title: "リサーチ・アシスタント（RA）",
-      company: "University of Pittsburgh",
+      company: "ピッツバーグ大学",
       category: "Academic",
       startData: "2008年9月",
       endDate: "2010年5月",
@@ -343,7 +343,7 @@ const faJobsPageData = {
     },
     {
       title: "図書館アシスタント",
-      company: "University of Pittsburgh 東アジア図書館",
+      company: "ピッツバーグ大学 東アジア図書館",
       category: "Other",
       startData: "2007年6月",
       endDate: "2008年4月",
