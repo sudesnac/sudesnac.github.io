@@ -103,7 +103,7 @@ $(document).ready(function () {
     homeData();
   }
 
-  // Publications page data
+   // Publications page data
   function renderCitations(sectionId, items) {
   const container = document.getElementById(sectionId);
 
@@ -120,15 +120,15 @@ $(document).ready(function () {
         )
         .join("")}
     </ol>
-  `;
-}
+  `;}
   
-function highlightAuthorName(html) {
+  function highlightAuthorName(html) {
   // highlight "Chakraborty, S." and "Chakraborty, Sudesna" if present
   return html
     .replaceAll("Chakraborty, S.", `<span class="fw-bold">Chakraborty, S.</span>`)
     .replaceAll("Chakraborty, Sudesna", `<span class="fw-bold">Chakraborty, Sudesna</span>`);
-}
+  }
+
 
   function publicationsData() {
     document.getElementById("page_title").innerText =
