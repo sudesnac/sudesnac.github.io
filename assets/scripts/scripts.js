@@ -103,20 +103,21 @@ $(document).ready(function () {
     homeData();
   }
 
-   // Publications page data
-  function highlightName(html) {
+// Publications page data
+  // Publications page data
+function highlightName(html) {
   return html
     .replaceAll("Chakraborty, S.", `<span class="fw-bold">Chakraborty, S.</span>`)
     .replaceAll("Chakraborty, Sudesna", `<span class="fw-bold">Chakraborty, Sudesna</span>`);
 }
 
 function formatCitation(html) {
-  // Markdown-style italics *...* → HTML italics <em>...</em>
-  // (non-greedy, handles multiple italic segments)
+  // Markdown italics *...* → HTML italics <em>...</em>
   return html.replace(/\*(.+?)\*/g, "<em>$1</em>");
 }
 
 function linkifyUrls(html) {
+  // Make any URL clickable (DOI + non-DOI like uwo.scholaris.ca)
   return html.replace(
     /\bhttps?:\/\/[^\s<]+/g,
     (url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`
@@ -127,59 +128,57 @@ function renderCitations(sectionId, items, numbered = true) {
   const container = document.getElementById(sectionId);
 
   const listTag = numbered ? "ol" : "ul";
-  const listClass = numbered ? "ps-3" : "ps-3 list-unstyled"; // or just "ps-3"
+  const listClass = numbered ? "ps-3" : "ps-3 list-unstyled";
 
   container.innerHTML = `
     <${listTag} class="${listClass}">
       ${items
-        .map((item) => `<li class="mb-2">${highlightName(linkifyUrls(formatCitation(item.citation)))}</li>`)
+        .map(
+          (item) =>
+            `<li class="mb-2">${highlightName(linkifyUrls(formatCitation(item.citation)))}</li>`
+        )
         .join("")}
     </${listTag}>
   `;
 }
 
+function publicationsData() {
+  document.getElementById("page_title").innerText =
+    lang === "en" ? "Publications" : "業績";
 
-  function publicationsData() {
-    document.getElementById("page_title").innerText =
-      lang === "en" ? "Publications" : "業績";
+  const data = lang === "en" ? enPublicationsPageData : faPublicationsPageData;
 
-    const data = lang === "en" ? enPublicationsPageData : faPublicationsPageData;
+  // Titles
+  const t1 = document.getElementById("publications_type_one_title");
+  t1.innerText = data.type_one_title;
+  t1.id = "journal-papers";
 
-    document.getElementById("publications_type_one_title").innerText =
-      data.type_one_title;
-    renderCitations("publications_type_one_data", data.type_one_items);
+  const t2 = document.getElementById("publications_type_two_title");
+  t2.innerText = data.type_two_title;
+  t2.id = "conference-papers";
 
-    document.getElementById("publications_type_two_title").innerText =
-      data.type_two_title;
-    renderCitations("publications_type_two_data", data.type_two_items);
+  const t3 = document.getElementById("publications_type_three_title");
+  t3.innerText = data.type_three_title;
+  t3.id = "conference-presentations";
 
-    document.getElementById("publications_type_three_title").innerText =
-      data.type_three_title;
-    renderCitations("publications_type_three_data", data.type_three_items);
+  const t4 = document.getElementById("publications_type_four_title");
+  t4.innerText = data.type_four_title;
+  t4.id = "phd-thesis";
 
-    document.getElementById("publications_type_four_title").innerText =
-      data.type_four_title;
-    renderCitations("publications_type_four_data", data.type_four_items, false);
+  const t5 = document.getElementById("publications_type_five_title");
+  t5.innerText = data.type_five_title;
 
-    document.getElementById("publications_type_five_title").innerText =
-      data.type_five_title;
-    renderCitations("publications_type_five_data", data.type_five_items);
-  }
-  document.getElementById("publications_type_one_title").innerText = data.type_one_title;
-  document.getElementById("publications_type_one_title").id = "journal-papers";
+  // Content
+  renderCitations("publications_type_one_data", data.type_one_items, true);
+  renderCitations("publications_type_two_data", data.type_two_items, true);
+  renderCitations("publications_type_three_data", data.type_three_items, true);
+  renderCitations("publications_type_four_data", data.type_four_items, false); // thesis: no numbering
+  renderCitations("publications_type_five_data", data.type_five_items, true);
+}
 
-  document.getElementById("publications_type_two_title").innerText = data.type_two_title;
-  document.getElementById("publications_type_two_title").id = "conference-papers";
-
-  document.getElementById("publications_type_three_title").innerText = data.type_three_title;
-  document.getElementById("publications_type_three_title").id = "conference-presentations";
-
-  document.getElementById("publications_type_four_title").innerText = data.type_four_title;
-  document.getElementById("publications_type_four_title").id = "phd-thesis";
-
-  if (pathname === "/publications") {
-    publicationsData();
-  }
+if (pathname === "/publications") {
+  publicationsData();
+}
 
 
   // Research page data
