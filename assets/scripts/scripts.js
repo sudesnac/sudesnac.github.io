@@ -2,425 +2,408 @@ var lang = localStorage.getItem("lang");
 var pathname = window.location.pathname.replace(".html", "");
 
 $(document).ready(function () {
-  // ---------- Language Handler
-  if (!lang) {
-    localStorage.setItem("lang", "en");
-  }
+	// ---------- Language Handler
+	if (!lang) {
+		localStorage.setItem("lang", "en");
+		lang = "en";
+	}
 
-  if (lang === "fa") {
-    document.getElementById("content_wrapper").classList.add("ltl_wrapper");
-    if (
-      document.getElementById("languageIcon") &&
-      document.getElementById("languageText")
-    ) {
-      document.getElementById("languageIcon").src =
-        "../assets/images/icons/en.png";
-      document.getElementById("languageText").innerText = "EN";
-    }
-  } else {
-    document.getElementById("content_wrapper").classList.add("rtr_wrapper");
-    if (
-      document.getElementById("languageIcon") &&
-      document.getElementById("languageText")
-    ) {
-      document.getElementById("languageIcon").src =
-        "../assets/images/icons/jp.png";
-      document.getElementById("languageText").innerText = "日本語";
-    }
-  }
+	// NOTE:
+	// Your code uses "fa" as the non-English language key.
+	// You are currently using it for Japanese. That's fine—just keep it consistent
+	// in lang/en.js and lang/fa.js.
+	if (lang === "fa") {
+		const cw = document.getElementById("content_wrapper");
+		if (cw) cw.classList.add("ltl_wrapper");
 
-  // Home page data
-  const home_data = {
-    image: globalData.image,
-    links: [
-      {
-        name: `mailto:${globalData.email}`,
-        active: globalData.email ? true : false,
-        img: "../assets/images/icons/mail.png",
-      },
-      {
-        name: globalData.googleScholar,
-        active: globalData.googleScholar ? true : false,
-        img: "../assets/images/icons/google-scholar.png",
-      },
-      {
-        name: globalData.whatsapp,
-        active: globalData.whatsapp ? true : false,
-        img: "../assets/images/icons/rg.png",
-      },
-      {
-        name: globalData.twitter,
-        active: globalData.twitter ? true : false,
-        img: "../assets/images/icons/bluesky.png",
-      },
-      {
-        name: globalData.linkedin,
-        active: globalData.linkedin ? true : false,
-        img: "../assets/images/icons/linkedin.png",
-      },
-      {
-        name: globalData.github,
-        active: globalData.github ? true : false,
-        url: "/",
-        img: "../assets/images/icons/github.png",
-      },
-      {
-        name: globalData.rm,
-        active: globalData.rm ? true : false,
-        img: "../assets/images/icons/rm.png",
-      },
-    ],
-  };
+		if (document.getElementById("languageIcon") && document.getElementById("languageText")) {
+			document.getElementById("languageIcon").src = "../assets/images/icons/en.png";
+			document.getElementById("languageText").innerText = "EN";
+		}
+	} else {
+		const cw = document.getElementById("content_wrapper");
+		if (cw) cw.classList.add("rtr_wrapper");
 
-  function homeData() {
-    document.getElementById("page_title").innerText =
-      lang === "en" ? enHomePageData.name : faHomePageData.name;
+		if (document.getElementById("languageIcon") && document.getElementById("languageText")) {
+			document.getElementById("languageIcon").src = "../assets/images/icons/jp.png";
+			document.getElementById("languageText").innerText = "日本語";
+		}
+	}
 
-    document.getElementById("home_image").src = home_data.image
-      ? home_data.image
-      : "";
-    document.getElementById("home_name").innerText =
-      lang === "en" ? enHomePageData.name : faHomePageData.name;
-    document.getElementById("home_job_title").innerText =
-      lang === "en" ? enHomePageData.jobTitle : faHomePageData.jobTitle;
-    document.getElementById("home_links").innerHTML = home_data.links
-      .filter((item) => item.active)
-      .map(
-        (link) =>
-          `<li>
-              <a href=${link.name} target='_blank'><img src=${link.img} alt=${link.name} /> </a>
-            </li>`
-      )
-      .join("");
+	// Home page data
+	const home_data = {
+		image: globalData.image,
+		links: [
+			{
+				name: `mailto:${globalData.email}`,
+				active: globalData.email ? true : false,
+				img: "../assets/images/icons/mail.png",
+			},
+			{
+				name: globalData.googleScholar,
+				active: globalData.googleScholar ? true : false,
+				img: "../assets/images/icons/google-scholar.png",
+			},
+			{
+				name: globalData.whatsapp,
+				active: globalData.whatsapp ? true : false,
+				img: "../assets/images/icons/rg.png",
+			},
+			{
+				name: globalData.twitter,
+				active: globalData.twitter ? true : false,
+				img: "../assets/images/icons/bluesky.png",
+			},
+			{
+				name: globalData.linkedin,
+				active: globalData.linkedin ? true : false,
+				img: "../assets/images/icons/linkedin.png",
+			},
+			{
+				name: globalData.github,
+				active: globalData.github ? true : false,
+				url: "/",
+				img: "../assets/images/icons/github.png",
+			},
+			{
+				name: globalData.rm,
+				active: globalData.rm ? true : false,
+				img: "../assets/images/icons/rm.png",
+			},
+		],
+	};
 
-    document.getElementById("home_title").innerText =
-      lang === "en" ? enHomePageData.home_title : faHomePageData.home_title;
-    document.getElementById("home_content").innerHTML =
-      lang === "en" ? enHomePageData.home_content : faHomePageData.home_content;
-  }
+	function homeData() {
+		document.getElementById("page_title").innerText =
+			lang === "en" ? enHomePageData.name : faHomePageData.name;
 
-  if (pathname === "/" || pathname === "/index") {
-    homeData();
-  }
+		document.getElementById("home_image").src = home_data.image ? home_data.image : "";
+		document.getElementById("home_name").innerText =
+			lang === "en" ? enHomePageData.name : faHomePageData.name;
+		document.getElementById("home_job_title").innerText =
+			lang === "en" ? enHomePageData.jobTitle : faHomePageData.jobTitle;
 
-// Publications page data
-  // Publications page data
-function highlightName(html) {
-  return html
-    .replaceAll("Chakraborty, S.", `<span class="fw-bold">Chakraborty, S.</span>`)
-    .replaceAll("Chakraborty, Sudesna", `<span class="fw-bold">Chakraborty, Sudesna</span>`);
-}
+		document.getElementById("home_links").innerHTML = home_data.links
+			.filter((item) => item.active)
+			.map(
+				(link) => `
+					<a href="${link.name}" target="_blank" rel="noopener noreferrer">
+						<img src="${link.img}" alt="" style="width:24px; height:24px; margin-right:10px;">
+					</a>
+				`,
+			)
+			.join("");
 
-function formatCitation(html) {
-  // Markdown italics *...* → HTML italics <em>...</em>
-  return html.replace(/\*(.+?)\*/g, "<em>$1</em>");
-}
+		document.getElementById("home_title").innerText =
+			lang === "en" ? enHomePageData.home_title : faHomePageData.home_title;
 
-function linkifyUrls(html) {
-  // Make any URL clickable (DOI + non-DOI like uwo.scholaris.ca)
-  return html.replace(
-    /\bhttps?:\/\/[^\s<]+/g,
-    (url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`
-  );
-}
+		// home_content is already HTML-ish template text
+		document.getElementById("home_content").innerHTML =
+			lang === "en" ? enHomePageData.home_content : faHomePageData.home_content;
+	}
 
-function renderCitations(sectionId, items, numbered = true) {
-  const container = document.getElementById(sectionId);
+	if (pathname === "/" || pathname === "/index") {
+		homeData();
+	}
 
-  const listTag = numbered ? "ol" : "ul";
-  const listClass = numbered ? "ps-3" : "ps-3 list-unstyled";
+	// ============================
+	// Publications page data (FIXED)
+	// ============================
+	function highlightName(html) {
+		// bold your name in rendered HTML
+		return html
+			.replaceAll(
+				"Chakraborty, S.",
+				`<span class="fw-bold">Chakraborty, S.</span>`,
+			)
+			.replaceAll(
+				"Chakraborty, Sudesna",
+				`<span class="fw-bold">Chakraborty, Sudesna</span>`,
+			);
+	}
 
-  container.innerHTML = `
-    <${listTag} class="${listClass}">
-      ${items
-        .map(
-          (item) =>
-            `<li class="mb-2">${highlightName(linkifyUrls(formatCitation(item.citation)))}</li>`
-        )
-        .join("")}
-    </${listTag}>
-  `;
-}
+	function formatCitation(html) {
+		// Markdown italics: *...*  ->  HTML italics: <em>...</em>
+		return html.replace(/\*(.+?)\*/g, "<em>$1</em>");
+	}
 
-function publicationsData() {
-  document.getElementById("page_title").innerText =
-    lang === "en" ? "Publications" : "業績";
+	function linkifyUrls(html) {
+		// linkify DOI + any https://... URL (including uwo.scholaris.ca)
+		return html.replace(
+			/\bhttps?:\/\/[^\s<]+/g,
+			(url) =>
+				`<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`,
+		);
+	}
 
-  const data = lang === "en" ? enPublicationsPageData : faPublicationsPageData;
+	function renderCitations(sectionId, items, numbered = true) {
+		const container = document.getElementById(sectionId);
+		if (!container) return;
 
-  // Titles
-  const t1 = document.getElementById("publications_type_one_title");
-  t1.innerText = data.type_one_title;
-  t1.id = "journal-papers";
+		const listTag = numbered ? "ol" : "ul";
+		const listClass = numbered ? "ps-3" : "ps-3 list-unstyled";
 
-  const t2 = document.getElementById("publications_type_two_title");
-  t2.innerText = data.type_two_title;
-  t2.id = "conference-papers";
+		container.innerHTML = `
+			<${listTag} class="${listClass}">
+				${items
+					.map(
+						(item) =>
+							`<li class="mb-2">${highlightName(
+								linkifyUrls(formatCitation(item.citation)),
+							)}</li>`,
+					)
+					.join("")}
+			</${listTag}>
+		`;
+	}
 
-  const t3 = document.getElementById("publications_type_three_title");
-  t3.innerText = data.type_three_title;
-  t3.id = "conference-presentations";
+	function publicationsData() {
+		document.getElementById("page_title").innerText =
+			lang === "en" ? "Publications" : "業績";
 
-  const t4 = document.getElementById("publications_type_four_title");
-  t4.innerText = data.type_four_title;
-  t4.id = "phd-thesis";
+		const data = lang === "en" ? enPublicationsPageData : faPublicationsPageData;
 
-  const t5 = document.getElementById("publications_type_five_title");
-  t5.innerText = data.type_five_title;
+		// Section titles + anchors
+		const t1 = document.getElementById("publications_type_one_title");
+		if (t1) {
+			t1.innerText = data.type_one_title;
+			t1.id = "journal-papers";
+		}
+		renderCitations("publications_type_one_data", data.type_one_items, true);
 
-  // Content
-  renderCitations("publications_type_one_data", data.type_one_items, true);
-  renderCitations("publications_type_two_data", data.type_two_items, true);
-  renderCitations("publications_type_three_data", data.type_three_items, true);
-  renderCitations("publications_type_four_data", data.type_four_items, false); // thesis: no numbering
-  renderCitations("publications_type_five_data", data.type_five_items, true);
-}
+		const t2 = document.getElementById("publications_type_two_title");
+		if (t2) {
+			t2.innerText = data.type_two_title;
+			t2.id = "conference-papers";
+		}
+		renderCitations("publications_type_two_data", data.type_two_items, true);
 
-if (pathname === "/publications") {
-  publicationsData();
-}
+		const t3 = document.getElementById("publications_type_three_title");
+		if (t3) {
+			t3.innerText = data.type_three_title;
+			t3.id = "conference-presentations";
+		}
+		renderCitations("publications_type_three_data", data.type_three_items, true);
 
+		const t4 = document.getElementById("publications_type_four_title");
+		if (t4) {
+			t4.innerText = data.type_four_title;
+			t4.id = "phd-thesis";
+		}
+		// thesis: unnumbered
+		renderCitations("publications_type_four_data", data.type_four_items, false);
 
-  // Research page data
-  function researchData() {
-    document.getElementById("page_title").innerText =
-      lang === "en" ? "Research" : "研究";
+		const t5 = document.getElementById("publications_type_five_title");
+		if (t5) t5.innerText = data.type_five_title;
+		renderCitations("publications_type_five_data", data.type_five_items, true);
+	}
 
-    document.getElementById("research_title").innerHTML =
-      lang === "en" ? enResearchPageData.title : faResearchPageData.title;
-    document.getElementById("research_data").innerHTML =
-      lang === "en" ? enResearchPageData.content : faResearchPageData.content;
-  }
+	if (pathname === "/publications") {
+		publicationsData();
+	}
 
-  if (pathname === "/research") {
-    researchData();
-  }
+	// Research page data
+	function researchData() {
+		document.getElementById("page_title").innerText =
+			lang === "en" ? "Research" : "研究";
 
-  // Jobs page data
-  function jobsData() {
-    document.getElementById("page_title").innerText =
-      lang === "en" ? "Jobs" : "経歴";
+		document.getElementById("research_title").innerHTML =
+			lang === "en" ? enResearchPageData.title : faResearchPageData.title;
 
-    document.getElementById("jobs_title").innerHTML =
-      lang === "en" ? enJobsPageData.title : faJobsPageData.title;
+		document.getElementById("research_data").innerHTML =
+			lang === "en" ? enResearchPageData.content : faResearchPageData.content;
+	}
 
-    function renderEducation(education) {
-      return education
-        .map(
-          (edu) => `
-        <div class='job_item'>
-          <div class='job_header'>
-            <div>
-              <h1>${edu.degree}</h1>
-              <h2>${edu.institution}</h2>
-            </div>
-            <div><span>${edu.duration}</span></div>
-          </div>
-          ${
-            edu.thesisTitle
-              ? `<p><strong>Thesis:</strong> ${edu.thesisTitle}</p>`
-              : ""
-          }
-          ${
-            edu.supervisors
-              ? `<p><strong>Supervisors:</strong> ${edu.supervisors.join(", ")}</p>`
-              : ""
-          }
-          ${
-            edu.link
-              ? `<p><a href="${edu.link}" target="_blank">View Thesis</a></p>`
-              : ""
-          }
-        </div>
-      `
-        )
-        .join("");
-    }
+	if (pathname === "/research") {
+		researchData();
+	}
 
-    function renderRecognitions(recognitions) {
-      return recognitions
-        .map(
-          (rec) => `
-        <div class='job_item'>
-          <h1>${rec.title}</h1>
-          <p>${rec.description}</p>
-        </div>
-      `
-        )
-        .join("");
-    }
+	// Jobs page data
+	function jobsData() {
+		document.getElementById("page_title").innerText =
+			lang === "en" ? "Jobs" : "経歴";
 
-    function renderGrants(grants) {
-      return grants
-        .map(
-          (grant) => `
-          <div class='job_item'>
-            <h1>${grant.title}</h1>
-            <p>${grant.description}</p>
-            <p><strong>${grant.duration}</strong></p>
-            ${
-              grant.link
-                ? `<p><a href="${grant.link}" target="_blank" class="cv_link">View</a></p>`
-                : ""
-            }
-          </div>
-        `
-        )
-        .join("");
-    }    
+		document.getElementById("jobs_title").innerHTML =
+			lang === "en" ? enJobsPageData.title : faJobsPageData.title;
 
-    function renderWorkExperience(items) {
-      return items
-        .map(
-          (job) => `
-        <div class='job_item'>
-          <div class='job_header'>
-            <div>
-              <h1>${job.title}</h1>
-              <h2>${job.company}${job.location}</h2>
-            </div>
-            <div>
-              <span>${job.startData} - ${
-            job.endDate ? job.endDate : lang === "en" ? "Now" : "現在"
-          }</span>
-            </div>
-          </div>
-          <p>${job.abstract}</p>
-          ${
-            job.achievements && job.achievements.length > 0
-              ? `<div class="job_achievements">
-                  <ul>
-                    ${job.achievements
-                      .map((achievement) => `<li>${achievement}</li>`)
-                      .join("")}
-                  </ul>
-                </div>`
-              : ""
-          }
-        </div>
-      `
-        )
-        .join("");
-    }
+		function renderEducation(education) {
+			return education
+				.map(
+					(edu) => `
+						<div class="mb-3">
+							<div class="fw-bold">${edu.degree}</div>
+							<div>${edu.institution}</div>
+							<div class="text-muted">${edu.duration}</div>
+							${edu.thesisTitle ? `<div>Thesis: ${edu.thesisTitle}</div>` : ""}
+							${edu.supervisors ? `<div>Supervisors: ${edu.supervisors.join(", ")}</div>` : ""}
+							${edu.link ? `<div><a href="${edu.link}" target="_blank" rel="noopener noreferrer">View Thesis</a></div>` : ""}
+						</div>
+					`,
+				)
+				.join("");
+		}
 
-    const jobsData = lang === "en" ? enJobsPageData : faJobsPageData;
+		function renderRecognitions(recognitions) {
+			return recognitions
+				.map(
+					(rec) => `
+						<div class="mb-3">
+							<div class="fw-bold">${rec.title}</div>
+							<div>${rec.description}</div>
+						</div>
+					`,
+				)
+				.join("");
+		}
 
-    document.getElementById("jobs_data").innerHTML = `
-  <section class="cv_section">
-    <h2 class="cv_heading">🎓 ${lang === "en" ? "Education" : "学歴"}</h2>
-    ${renderEducation(jobsData.education)}
-  </section>
+		function renderGrants(grants) {
+			return grants
+				.map(
+					(grant) => `
+						<div class="mb-3">
+							<div class="fw-bold">${grant.title}</div>
+							<div>${grant.description}</div>
+							<div class="text-muted">${grant.duration}</div>
+							${grant.link ? `<div><a href="${grant.link}" target="_blank" rel="noopener noreferrer">View</a></div>` : ""}
+						</div>
+					`,
+				)
+				.join("");
+		}
 
-  <section class="cv_section">
-    <h2 class="cv_heading">🏅 ${lang === "en" ? "Recognitions" : "受賞"}</h2>
-    ${renderRecognitions(jobsData.recognitions)}
-  </section>
+		function renderWorkExperience(items) {
+			return items
+				.map(
+					(job) => `
+						<div class="mb-4">
+							<div class="fw-bold">${job.title}</div>
+							<div>${job.company}${job.location ? `, ${job.location}` : ""}</div>
+							<div class="text-muted">${job.startData} - ${
+								job.endDate ? job.endDate : lang === "en" ? "Now" : "現在"
+							}</div>
+							${job.abstract ? `<div class="mt-2">${job.abstract}</div>` : ""}
+							${
+								job.achievements && job.achievements.length > 0
+									? `<ul class="mt-2">${job.achievements
+											.map((a) => `<li>${a}</li>`)
+											.join("")}</ul>`
+									: ""
+							}
+						</div>
+					`,
+				)
+				.join("");
+		}
 
-  <section class="cv_section">
-    <h2 class="cv_heading">💰 ${lang === "en" ? "Grants" : "研究資金"}</h2>
-    ${renderGrants(jobsData.grants)}
-  </section>
+		const jobsDataObj = lang === "en" ? enJobsPageData : faJobsPageData;
 
-  <section class="cv_section">
-    <h2 class="cv_heading">💼 ${lang === "en" ? "Work Experience" : "職歴"}</h2>
-    ${renderWorkExperience(jobsData.items)}
-  </section>
-`;
-  }
+		document.getElementById("jobs_data").innerHTML = `
+			<h3 class="mt-3">🎓 ${lang === "en" ? "Education" : "学歴"}</h3>
+			${renderEducation(jobsDataObj.education)}
 
-  if (pathname === "/jobs") {
-    jobsData();
-  }
+			<h3 class="mt-4">🏅 ${lang === "en" ? "Recognitions" : "受賞"}</h3>
+			${renderRecognitions(jobsDataObj.recognitions)}
 
-// Contact page data
-  const contact_data = {
-    contact_title: lang === "en" ? "Contact" : "問合せ",
-    contact_items: [
-      {
-        img: "../assets/images/icons/location.png",
-        title: lang === "en" ? globalData.enAddress : globalData.faAddress,
-        active: globalData.enAddress || globalData.faAddress ? true : false,
-      },
-      {
-        img: "../assets/images/icons/phone.png",
-        title: globalData.phone,
-        active: globalData.phone ? true : false,
-      },
-      {
-        img: "../assets/images/icons/mail.png",
-        title: globalData.email,
-        active: globalData.email ? true : false,
-      },
-      {
-        img: "../assets/images/icons/bluesky.png",
-        url: globalData.twitter,
-        name: globalData.twitterTitle,
-        active: globalData.twitter ? true : false,
-      },
-      {
-        img: "../assets/images/icons/rg.png",
-        url: globalData.whatsapp,
-        name: globalData.whatsappTitle,
-        active: globalData.whatsapp ? true : false,
-      },
-      {
-        img: "../assets/images/icons/google-scholar.png",
-        url: globalData.googleScholar,
-        name: globalData.googleScholarTitle,
-        active: globalData.googleScholar ? true : false,
-      },
-      {
-        img: "../assets/images/icons/orcid.png",
-        url: globalData.orcid,
-        name: globalData.orcidTitle,
-        active: globalData.orcid ? true : false,
-      },
-      {
-        img: "../assets/images/icons/github.png",
-        url: globalData.github,
-        name: globalData.githubTitle,
-        active: globalData.github ? true : false,
-      },
-      {
-        img: "../assets/images/icons/linkedin.png",
-        url: globalData.linkedin,
-        name: globalData.linkedinTitle,
-        active: globalData.linkedin ? true : false,
-      },
-      {
-        img: "../assets/images/icons/rm.png",
-        url: globalData.rm,
-        name: globalData.rmTitle,
-        active: globalData.rm ? true : false,
-      },
-    ],
-  };
+			<h3 class="mt-4">💰 ${lang === "en" ? "Grants" : "研究資金"}</h3>
+			${renderGrants(jobsDataObj.grants)}
 
-  function contactData() {
-    document.getElementById("page_title").innerHTML =
-      contact_data.contact_title;
-    document.getElementById("contact_title").innerHTML =
-      contact_data.contact_title;
-    document.getElementById("contact_data").innerHTML =
-      contact_data.contact_items
-        .filter((item) => item.active)
-        .map(
-          (link) =>
-            `<li>
-              <img src=${link.img} alt=${link.title} /> 
-              ${
-                link.url
-                  ? `<a href=${link.url} target='_blank'>
-                      ${link.name ? link.name : link.url} 
-                    </a>`
-                  : `<p>${link.title}</p>`
-              }
-            </li>`
-        )
-        .join("");
-  }
+			<h3 class="mt-4">💼 ${lang === "en" ? "Work Experience" : "職歴"}</h3>
+			${renderWorkExperience(jobsDataObj.items)}
+		`;
+	}
 
-  if (pathname === "/contact") {
-    contactData();
-  }
+	if (pathname === "/jobs") {
+		jobsData();
+	}
+
+	// Contact page data
+	const contact_data = {
+		contact_title: lang === "en" ? "Contact" : "問合せ",
+		contact_items: [
+			{
+				img: "../assets/images/icons/location.png",
+				title: lang === "en" ? globalData.enAddress : globalData.faAddress,
+				active: globalData.enAddress || globalData.faAddress ? true : false,
+			},
+			{
+				img: "../assets/images/icons/phone.png",
+				title: globalData.phone,
+				active: globalData.phone ? true : false,
+			},
+			{
+				img: "../assets/images/icons/mail.png",
+				title: globalData.email,
+				active: globalData.email ? true : false,
+			},
+			{
+				img: "../assets/images/icons/bluesky.png",
+				url: globalData.twitter,
+				name: globalData.twitterTitle,
+				active: globalData.twitter ? true : false,
+			},
+			{
+				img: "../assets/images/icons/rg.png",
+				url: globalData.whatsapp,
+				name: globalData.whatsappTitle,
+				active: globalData.whatsapp ? true : false,
+			},
+			{
+				img: "../assets/images/icons/google-scholar.png",
+				url: globalData.googleScholar,
+				name: globalData.googleScholarTitle,
+				active: globalData.googleScholar ? true : false,
+			},
+			{
+				img: "../assets/images/icons/orcid.png",
+				url: globalData.orcid,
+				name: globalData.orcidTitle,
+				active: globalData.orcid ? true : false,
+			},
+			{
+				img: "../assets/images/icons/github.png",
+				url: globalData.github,
+				name: globalData.githubTitle,
+				active: globalData.github ? true : false,
+			},
+			{
+				img: "../assets/images/icons/linkedin.png",
+				url: globalData.linkedin,
+				name: globalData.linkedinTitle,
+				active: globalData.linkedin ? true : false,
+			},
+			{
+				img: "../assets/images/icons/rm.png",
+				url: globalData.rm,
+				name: globalData.rmTitle,
+				active: globalData.rm ? true : false,
+			},
+		],
+	};
+
+	function contactData() {
+		document.getElementById("page_title").innerHTML = contact_data.contact_title;
+		document.getElementById("contact_title").innerHTML = contact_data.contact_title;
+
+		document.getElementById("contact_data").innerHTML = contact_data.contact_items
+			.filter((item) => item.active)
+			.map(
+				(link) => `
+					<div class="d-flex align-items-center mb-2">
+						<img src="${link.img}" alt="" style="width:22px; height:22px; margin-right:10px;">
+						${
+							link.url
+								? `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${
+										link.name ? link.name : link.url
+									}</a>`
+								: `<span>${link.title}</span>`
+						}
+					</div>
+				`,
+			)
+			.join("");
+	}
+
+	if (pathname === "/contact") {
+		contactData();
+	}
 });
