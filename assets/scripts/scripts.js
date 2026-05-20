@@ -104,30 +104,22 @@ $(document).ready(function () {
   }
 
    // Publications page data
-  function renderCitations(sectionId, items) {
-  const container = document.getElementById(sectionId);
-
-  container.innerHTML = `
-    <ol class="ps-3">
-      ${items
-        .map(
-          (item) => `
-            <li class="mb-2">
-              <span class="citation">${item.citation}</span>
-              <span class="citation">${highlightAuthorName(item.citation)}</span>
-            </li>
-          `
-        )
-        .join("")}
-    </ol>
-  `;}
-  
-  function highlightAuthorName(html) {
-  // highlight "Chakraborty, S." and "Chakraborty, Sudesna" if present
+  function highlightName(html) {
   return html
     .replaceAll("Chakraborty, S.", `<span class="fw-bold">Chakraborty, S.</span>`)
     .replaceAll("Chakraborty, Sudesna", `<span class="fw-bold">Chakraborty, Sudesna</span>`);
-  }
+}
+
+function renderCitations(sectionId, items) {
+  const container = document.getElementById(sectionId);
+  container.innerHTML = `
+    <ol class="ps-3">
+      ${items
+        .map((item) => `<li class="mb-2">${highlightName(item.citation)}</li>`)
+        .join("")}
+    </ol>
+  `;
+}
 
 
   function publicationsData() {
