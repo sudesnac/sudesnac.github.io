@@ -116,6 +116,14 @@ function formatCitation(html) {
   return html.replace(/\*(.+?)\*/g, "<em>$1</em>");
 }
 
+function linkifyDois(html) {
+  // turns https://doi.org/... or http://dx.doi.org/... into clickable links
+  return html.replace(
+    /\bhttps?:\/\/(?:dx\.)?doi\.org\/[^\s<]+/g,
+    (url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`
+  );
+}
+
 function renderCitations(sectionId, items, numbered = true) {
   const container = document.getElementById(sectionId);
 
@@ -125,7 +133,7 @@ function renderCitations(sectionId, items, numbered = true) {
   container.innerHTML = `
     <${listTag} class="${listClass}">
       ${items
-        .map((item) => `<li class="mb-2">${highlightName(formatCitation(item.citation))}</li>`)
+        .map((item) => `<li class="mb-2">${highlightName(linkifyDois(formatCitation(item.citation)))}</li>`)
         .join("")}
     </${listTag}>
   `;
