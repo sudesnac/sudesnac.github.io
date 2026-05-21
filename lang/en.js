@@ -2,8 +2,8 @@
 const enNavbarData = {
   title: "Sudesna Chakraborty",
   Home: "Home",
-  publications: "Publications",
   Research: "Research",
+  publications: "Publications",
   Jobs: "CV",
   Contact: "Contact",
 };
@@ -16,7 +16,7 @@ const enHomePageData = {
   home_content: `
   <div class="about_content">
   <p>
-    I am a neuroscientist and assistant professor at Aoyama Gakuin University (Department of Integrated Information Technology), with a strong interest in understanding the human brain’s structural and functional networks across aging and cognitive states. 
+    I am a neuroimaging researcher at Aoyama Gakuin University investigating macroscale brain organization, with a focus on cortico–subcortical connectivity and how it changes with aging. My work combines multimodal MRI and computational modeling to understand how large-scale brain networks support complex cognition across the lifespan. I am also exploring how emerging language models can help us better understand language comprehension and its neural basis.
   </p>
   </div>
   `,

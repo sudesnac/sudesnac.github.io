@@ -1,8 +1,8 @@
 const faNavbarData = {
   title: "チャクラボルティ　シュデシナ",
   Home: "ホーム",
-  publications: "業績",
   Research: "研究",
+  publications: "業績",
   Jobs: "経歴",
   Contact: "連絡先",
 };
@@ -301,7 +301,7 @@ const faJobsPageData = {
     },
     {
       title: "リサーチ・アシスタント（RA）",
-      company: "放射線医学総合研究所（NIRS）",
+      company: "放射線医学総合研究所（NIRS）［現・量子科学技術研究開発機構（QST）］",
       category: "Academic",
       startData: "2010年12月",
       endDate: "2011年3月",
