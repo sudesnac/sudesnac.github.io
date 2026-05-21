@@ -138,7 +138,7 @@ const faResearchPageData = {
 };
 
 const faJobsPageData = {
-  title: "経歴（CV）",
+  title: "経歴",
 
   education: [
     {

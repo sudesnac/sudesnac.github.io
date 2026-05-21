@@ -285,9 +285,9 @@ $(document).ready(function () {
                 <div class="cv_item_meta">${edu.duration ?? ""}</div>
               </div>
               <div class="cv_item_subtitle">${edu.institution ?? ""}</div>
-              ${edu.thesisTitle ? `<div class="cv_item_text"><span class="fw-bold">Thesis:</span> ${edu.thesisTitle}</div>` : ""}
-              ${edu.supervisors ? `<div class="cv_item_text"><span class="fw-bold">Supervisors:</span> ${edu.supervisors.join(", ")}</div>` : ""}
-              ${edu.link ? `<div class="cv_item_text"><a class="cv_link" href="${edu.link}" target="_blank" rel="noopener noreferrer">View</a></div>` : ""}
+              ${edu.thesisTitle ? `<div class="cv_item_text"><span class="fw-bold">${lang === "fa" ? "博士論文：" : "Thesis:"}</span> ${edu.thesisTitle}</div>` : ""}
+			  ${edu.supervisors ? `<div class="cv_item_text"><span class="fw-bold">${lang === "fa" ? "指導教官：" : "Supervisors:"}</span> ${edu.supervisors.join(", ")}</div>` : ""}
+			  ${edu.link ? `<div class="cv_item_text"><a class="cv_link" href="${edu.link}" target="_blank" rel="noopener noreferrer">${lang === "fa" ? "閲覧" : "View"}</a></div>` : ""}
             </div>
           `,
         )
